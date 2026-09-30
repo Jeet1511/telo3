@@ -3,11 +3,15 @@
 .gitignore
 .gitattributes
 
-# GitHub specific
-.github/SEO-OPTIMIZATION.md
-.github/keywords.txt
-.github/schema.json
-.github/sitemap.txt
+# GitHub specific (not needed in npm)
+.github/
+CONTRIBUTING.md
+CHANGELOG.md
+QUICK-START-ONBOARDING.md
+SOCIAL-PREVIEW.md
+PUBLISHING.md
+publish.ps1
+examples/
 
 # Development files
 node_modules/
@@ -30,10 +34,10 @@ tests/
 *.test.js
 *.spec.js
 
-# Documentation (keep only essential)
-.github/SOCIAL-PREVIEW.md
-
 # Temporary files
 tmp/
 temp/
 *.tmp
+
+# Documentation (keep minimal)
+README.md

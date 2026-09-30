@@ -75,17 +75,13 @@
     "templates/",
     "references/",
     "scripts/",
-    "examples/",
     "SKILL.md",
     "AI-CONTEXT.md",
     "ONBOARDING-SKILL.md",
-    "QUICK-START-ONBOARDING.md",
-    "CONTRIBUTING.md",
-    "CHANGELOG.md",
-    "LICENSE",
     "SKILL-METADATA.json",
     "cli.js",
-    "index.js"
+    "index.js",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=14.0.0"
