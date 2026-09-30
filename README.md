@@ -142,10 +142,10 @@ Telo3 is a universal framework that works in any development environment.
 
 ```bash
 # Install globally
-npm install -g telo3
+npm install -g @jeet1511/telo3
 
 # Or install in your project
-npm install telo3
+npm install @jeet1511/telo3
 ```
 
 ### Or Clone from GitHub
