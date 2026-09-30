@@ -1,5 +1,5 @@
 {
-  "name": "telo3",
+  "name": "@jeet1511/telo3",
   "version": "5.0.0",
   "description": "AI development framework and project-context system for coding agents. Provides persistent memory, quality frameworks, and systematic engineering practices for AI assistants like Claude, ChatGPT, GitHub Copilot, and Cursor.",
   "main": "index.js",
