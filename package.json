@@ -1,0 +1,101 @@
+{
+  "name": "telo3",
+  "version": "5.0.0",
+  "description": "AI development framework and project-context system for coding agents. Provides persistent memory, quality frameworks, and systematic engineering practices for AI assistants like Claude, ChatGPT, GitHub Copilot, and Cursor.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "telo3": "./cli.js",
+    "telo3-init": "./scripts/init-project-context.sh"
+  },
+  "scripts": {
+    "init": "./scripts/init-project-context.sh",
+    "validate": "./scripts/validate-project-context.sh"
+  },
+  "keywords": [
+    "telo3",
+    "ai-coding",
+    "ai-assistant",
+    "ai-development",
+    "claude",
+    "chatgpt",
+    "copilot",
+    "cursor",
+    "project-context",
+    "ai-memory",
+    "coding-agent",
+    "systematic-engineering",
+    "code-quality",
+    "ai-framework",
+    "developer-tools",
+    "project-management",
+    "documentation",
+    "context-management",
+    "ai-skills",
+    "smart-onboarding",
+    "token-optimization",
+    "quality-frameworks",
+    "security",
+    "accessibility",
+    "performance",
+    "seo",
+    "privacy",
+    "compliance",
+    "gdpr",
+    "wcag",
+    "anti-vibe-coding",
+    "architectural-patterns",
+    "design-system",
+    "persistent-memory",
+    "mcp-integration",
+    "skill-delegation",
+    "production-ready",
+    "framework-agnostic",
+    "nextjs",
+    "react",
+    "typescript",
+    "python",
+    "golang"
+  ],
+  "author": {
+    "name": "Jeet",
+    "email": "contact@jeet1511.dev",
+    "url": "https://github.com/jeet1511"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeet1511/telo3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeet1511/telo3/issues"
+  },
+  "homepage": "https://github.com/Jeet1511/telo3#readme",
+  "files": [
+    "templates/",
+    "references/",
+    "scripts/",
+    "examples/",
+    "SKILL.md",
+    "AI-CONTEXT.md",
+    "ONBOARDING-SKILL.md",
+    "QUICK-START-ONBOARDING.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SKILL-METADATA.json",
+    "cli.js",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

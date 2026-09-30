@@ -138,7 +138,17 @@ Telo3 supports multiple communication modes optimized for different use cases:
 
 Telo3 is a universal framework that works in any development environment.
 
-### Clone Telo3 Repository
+### Install via npm (Recommended)
+
+```bash
+# Install globally
+npm install -g telo3
+
+# Or install in your project
+npm install telo3
+```
+
+### Or Clone from GitHub
 
 ```bash
 # Clone Telo3 to your home directory
@@ -162,7 +172,13 @@ git submodule add https://github.com/Jeet1511/telo3.git telo3
 
 ### Initialize Telo3 Project Context
 
-**Automatic setup:**
+**If installed via npm:**
+```bash
+cd your-project
+telo3 init
+```
+
+**If cloned from GitHub:**
 ```bash
 cd your-project
 ~/telo3/scripts/init-project-context.sh
@@ -178,7 +194,7 @@ cp -r ~/telo3/templates/* ./project-context/
 
 **For new/empty projects:**
 ```
-Use Telo3 onboarding from ~/telo3/ - this is a new project
+Use Telo3 onboarding - this is a new project
 ```
 
 **For existing projects:**
