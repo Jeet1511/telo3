@@ -1,6 +1,6 @@
-# 🚀 Telo3
+# Telo3
 
-**Elite AI Development Framework - Transform Vibe Coders into Systematic Engineers**
+**Telo3 is an AI development framework and project-context system for coding agents. Telo3 provides persistent memory, quality frameworks, and systematic engineering practices that transform AI coding assistants (Claude, ChatGPT, GitHub Copilot, Cursor) into reliable development partners.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/jeet1511/telo3?style=social)](https://github.com/jeet1511/telo3/stargazers)
@@ -8,182 +8,278 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/jeet1511/telo3/pulls)
 [![Author](https://img.shields.io/badge/Author-Jeet-blue?style=flat&logo=github)](https://github.com/jeet1511)
 
-> Created by **[Jeet](https://github.com/jeet1511)** - Making AI coding agents systematically brilliant since 2024.
+> **Created by [Jeet (@jeet1511)](https://github.com/jeet1511)** · [Repository](https://github.com/jeet1511/telo3) · [Issues](https://github.com/jeet1511/telo3/issues) · [Contributing](CONTRIBUTING.md)
 
 ---
 
-## 🎯 What is Telo3?
+## What is Telo3?
 
-**Telo3** is the most comprehensive AI development framework that stops AI hallucination, architectural drift, and vibe coding. It transforms any AI coding agent (Claude, ChatGPT, GitHub Copilot, Cursor, Kiro) into a systematic engineering partner.
+Telo3 is a comprehensive AI development framework that provides project-context management, quality assurance frameworks, and systematic engineering workflows for AI coding agents. The Telo3 system prevents AI hallucination, architectural drift, and inconsistent code quality through a 6-document context architecture and 11 integrated quality frameworks.
 
-### The Problem It Solves
+### Why Telo3?
 
-❌ **AI Vibe Coding** → Generic aesthetics, random decisions  
-❌ **Forgotten Context** → Repeated explanations, lost decisions  
-❌ **Token Waste** → Reading everything, testing unnecessarily  
-❌ **Security Mistakes** → Unvalidated input, exposed secrets  
-❌ **Privacy Oversights** → Undocumented tracking, compliance gaps  
-❌ **Architectural Drift** → Inconsistent patterns, random tech choices  
-❌ **Design Inconsistency** → Copy-paste UI, no system  
-❌ **Fabricated Claims** → Fake stats, testimonials, compliance  
+Traditional AI coding assistants suffer from context loss, inconsistent quality, and "vibe coding" (generic, aesthetically-driven code without systematic engineering). Telo3 solves these problems through:
 
-### The Telo3 Solution
+**Problems Telo3 Prevents:**
 
-✅ **6-Document System** → Persistent project memory  
-✅ **Quality Frameworks** → Security, privacy, accessibility, SEO, performance  
-✅ **Token Optimization** → 80% fewer tokens, 5x faster  
-✅ **Caveman Mode** → Ultra-concise communication  
-✅ **Smart Delegation** → Uses specialized skills/MCP automatically  
-✅ **Anti-Vibe-Coding** → Systematic design enforcement  
-✅ **Legal Awareness** → COPPA, CAN-SPAM, GDPR, DMCA guidance  
-✅ **Framework-Agnostic** → Works with ANY tech stack  
+- ❌ **AI Vibe Coding** — Generic aesthetics without engineering discipline
+- ❌ **Context Loss** — Forgotten decisions and repeated explanations
+- ❌ **Token Inefficiency** — Wasteful token usage and slow iteration
+- ❌ **Security Vulnerabilities** — Unvalidated input and exposed credentials
+- ❌ **Privacy Violations** — Undocumented tracking and compliance gaps
+- ❌ **Architectural Drift** — Inconsistent patterns and random technology choices
+- ❌ **Design Inconsistency** — Copy-paste interfaces without design systems
+- ❌ **Quality Gaps** — Missing accessibility, SEO, and performance standards
 
----
+**How Telo3 Solves These:**
 
-## 🔥 Key Features
+**How Telo3 Solves These:**
 
-### Core System (The Brain)
-
-| Feature | Description | Benefit |
-|---------|-------------|---------|
-| **🤖 Smart Onboarding** | AI detects empty projects, asks smart questions, plans & builds | 0→Production in minutes (NEW!) |
-| **6 Documents** | prd.md, architecture.md, rules.md, design.md, tasks.md, memory.md | Persistent AI memory across sessions |
-| **AI-CONTEXT.md** | 30-second quick reference | AI understands instantly |
-| **Selective Loading** | Read only what's needed | Minimize token usage |
-| **Smart Updates** | Update only changed docs | Stay current, stay efficient |
-
-### Quality Dimensions (The Shield)
-
-| Dimension | What It Covers | File |
-|-----------|----------------|------|
-| **Security** | Auth, validation, secrets, injection prevention | `security-quality.md` |
-| **Privacy** | GDPR, COPPA, data collection, third-party tracking | `privacy-compliance.md` |
-| **Legal** | Age restrictions, email laws, subscriptions, DMCA | `legal-compliance.md` |
-| **SEO** | Meta tags, sitemaps, Core Web Vitals, structured data | `seo-quality.md` |
-| **Accessibility** | WCAG 2.1 AA, keyboard nav, screen readers | `accessibility-quality.md` |
-| **Performance** | LCP, INP, CLS, image optimization | `performance-quality.md` |
-| **UI Quality** | Anti-vibe-coding, design consistency | `ui-quality.md` |
-
-### Efficiency Modes (The Turbo)
-
-| Mode | Description | Token Savings |
-|------|-------------|---------------|
-| **Normal** | Brief, clear communication | 50% |
-| **Caveman** | Ultra-short, no fluff | 80% |
-| **Smart Delegation** | Uses best tool for each job | Varies |
+- ✅ **6-Document Project Context** — prd.md, architecture.md, rules.md, design.md, tasks.md, memory.md provide persistent AI memory
+- ✅ **11 Quality Frameworks** — Security, privacy, accessibility (WCAG), SEO, performance (Core Web Vitals), legal compliance (GDPR, COPPA, CAN-SPAM, DMCA)
+- ✅ **Token Optimization** — 80% reduction through selective context loading and "caveman mode" communication
+- ✅ **Smart Delegation** — Automatic detection and use of specialized skills and MCP servers
+- ✅ **Anti-Vibe-Coding Framework** — Systematic design system enforcement
+- ✅ **Framework Agnostic** — Works with React, Next.js, Vue, Python, Go, Rust, and any technology stack
+- ✅ **Smart Onboarding** — AI-driven project discovery and automated setup for empty projects
 
 ---
 
-## ⚡ Quick Start
+## Telo3 Architecture
 
-### 1. Install Telo3 (Universal - Works Everywhere)
+## Telo3 Architecture
 
-**Option A: Clone to any location**
+The Telo3 system consists of three core layers:
+
+### 1. Project Context Layer (6-Document System)
+
+Telo3 maintains project state through six interconnected markdown documents:
+
+| Document | Purpose | Telo3 Function |
+|----------|---------|----------------|
+| **prd.md** | Product requirements | What the project does and why |
+| **architecture.md** | Technical architecture | System structure, technology choices, patterns |
+| **rules.md** | Coding standards | Language-specific conventions, best practices |
+| **design.md** | Design system | UI/UX standards, component library, brand guidelines |
+| **tasks.md** | Implementation roadmap | Current sprint, backlog, completed work |
+| **memory.md** | Decision log | Recent changes, active context, session continuity |
+
+### 2. Quality Framework Layer (11 Dimensions)
+
+Telo3 quality frameworks ensure production-ready code:
+
+| Framework | Standards | Telo3 Reference |
+|-----------|-----------|-----------------|
+| **Security** | OWASP, input validation, authentication | [security-quality.md](references/security-quality.md) |
+| **Privacy** | GDPR, COPPA, data protection | [privacy-compliance.md](references/privacy-compliance.md) |
+| **Legal** | CAN-SPAM, DMCA, terms compliance | [legal-compliance.md](references/legal-compliance.md) |
+| **Accessibility** | WCAG 2.1 AA, keyboard navigation, screen readers | [accessibility-quality.md](references/accessibility-quality.md) |
+| **SEO** | Meta tags, semantic HTML, Core Web Vitals | [seo-quality.md](references/seo-quality.md) |
+| **Performance** | LCP, INP, CLS optimization | [performance-quality.md](references/performance-quality.md) |
+| **UI Quality** | Design system consistency, anti-vibe-coding | [ui-quality.md](references/ui-quality.md) |
+| **Token Efficiency** | Selective loading, caveman mode | [token-optimization.md](references/token-optimization.md) |
+| **Smart Delegation** | MCP integration, skill discovery | [smart-skill-delegation.md](references/smart-skill-delegation.md) |
+| **Documentation** | Systematic specifications | [document-specification.md](references/document-specification.md) |
+| **Workflow** | AI behavior patterns | [workflow.md](references/workflow.md) |
+
+### 3. Intelligence Layer (Smart Systems)
+
+- **Smart Onboarding** — Automated project discovery and planning ([ONBOARDING-SKILL.md](ONBOARDING-SKILL.md))
+- **Context Intelligence** — Selective document loading based on task
+- **Skill Delegation** — Automatic detection of specialized tools
+- **Token Optimization** — 80% reduction through intelligent caching
+
+---
+
+## Features
+
+## Features
+
+### Core Telo3 Capabilities
+
+- **Persistent Project Memory** — Six markdown documents (prd, architecture, rules, design, tasks, memory) maintain complete project context across AI sessions
+- **Smart Onboarding** — Automated project discovery through conversational AI for empty codebases ([Quick Start Guide](QUICK-START-ONBOARDING.md))
+- **Token Optimization** — 80% reduction through selective context loading and caveman mode communication
+- **Quality Frameworks** — 11 production-ready frameworks covering security, privacy, accessibility, SEO, performance
+- **Smart Skill Delegation** — Automatic detection and integration of specialized MCP servers and AI skills
+- **Framework Agnostic** — Compatible with React, Vue, Next.js, Python, Go, Rust, and any technology stack
+- **Universal AI Compatibility** — Works with Claude, ChatGPT, GitHub Copilot, Cursor, Kiro, and any AI coding assistant
+
+### Telo3 Quality Dimensions
+
+Telo3 enforces production standards across 11 quality dimensions:
+
+1. **Security** — OWASP standards, input validation, authentication patterns
+2. **Privacy** — GDPR, COPPA, CCPA compliance guidance
+3. **Legal** — CAN-SPAM, DMCA, terms of service frameworks
+4. **Accessibility** — WCAG 2.1 Level AA compliance
+5. **SEO** — Semantic HTML, meta tags, Core Web Vitals
+6. **Performance** — LCP, INP, CLS optimization strategies
+7. **UI Quality** — Design system consistency, anti-vibe-coding principles
+8. **Token Efficiency** — Context caching and selective loading
+9. **Smart Delegation** — MCP and skill integration intelligence
+10. **Documentation** — Systematic specification standards
+11. **Workflow** — AI behavior and decision patterns
+
+### Efficiency Modes
+
+Telo3 supports multiple communication modes optimized for different use cases:
+
+| Mode | Description | Token Savings | Use Case |
+|------|-------------|---------------|----------|
+| **Normal** | Clear, concise documentation | 50% | Standard development |
+| **Caveman** | Ultra-compressed communication | 80% | Rapid iteration |
+| **Selective** | Context-aware document loading | Varies | Large projects |
+| **Smart Delegation** | Automatic tool selection | Varies | Specialized tasks |
+
+---
+
+## Installation
+
+Telo3 is a universal framework that works in any development environment.
+
+### Clone Telo3 Repository
+
 ```bash
-# Clone anywhere you want
+# Clone Telo3 to your home directory
 git clone https://github.com/Jeet1511/telo3.git ~/telo3
 
-# Or in your project
+# Or clone into your project directory
 git clone https://github.com/Jeet1511/telo3.git ./telo3
 ```
 
-**Option B: Add as Git submodule**
+### Or Add as Git Submodule
+
 ```bash
+# Add Telo3 to an existing project
 cd your-project
 git submodule add https://github.com/Jeet1511/telo3.git telo3
 ```
 
-**Option C: Download ZIP**
-```bash
-# Download and extract anywhere
-curl -L https://github.com/Jeet1511/telo3/archive/main.zip -o telo3.zip
-unzip telo3.zip
-```
+---
 
-### 2. Initialize Your Project (Universal)
+## Usage
 
-**Automatic:**
+### Initialize Telo3 Project Context
+
+**Automatic setup:**
 ```bash
 cd your-project
-./path/to/telo3/scripts/init-project-context.sh
+~/telo3/scripts/init-project-context.sh
 ```
 
-**Manual:**
+**Manual setup:**
 ```bash
-# Copy templates to your preferred location
-cp -r telo3/templates/* ./docs/context/
-# Or
-cp -r telo3/templates/* ./project-context/
-# Or wherever you want!
+# Copy Telo3 templates to your project
+cp -r ~/telo3/templates/* ./project-context/
 ```
 
-### 3. Tell Your AI (Works with ANY AI)
+### Activate Telo3 with Your AI
 
-**🆕 For Empty/New Projects (Smart Onboarding):**
+**For new/empty projects:**
 ```
 Use Telo3 onboarding from ~/telo3/ - this is a new project
 ```
-*AI will ask smart questions, plan architecture, and build automatically!*
+
+**For existing projects:**
+
+**For existing projects:**
+
+**Kiro IDE:**
+```
+Use Telo3 from ~/telo3/ - Read AI-CONTEXT.md first
+```
+
+**Cursor:**
+```
+@telo3/AI-CONTEXT.md Use Telo3 systematic approach
+```
+
+**GitHub Copilot:**
+```
+#file:telo3/AI-CONTEXT.md Follow Telo3 project context system
+```
+
+**Claude / ChatGPT:**
+```
+Use Telo3 framework from ~/telo3/ - Read AI-CONTEXT.md for quick reference
+```
 
 ---
 
-**For Existing Projects:**
+## Telo3 Skills
 
-**For Kiro IDE:**
-```
-Use Telo3 from ./telo3/
-Read AI-CONTEXT.md first.
-```
+Telo3 provides specialized skills for different development scenarios:
 
-**For Cursor:**
-```
-@telo3/AI-CONTEXT.md Read this first.
-Use systematic engineering approach.
-```
+- **[SKILL.md](SKILL.md)** — Complete Telo3 system documentation and AI instructions
+- **[ONBOARDING-SKILL.md](ONBOARDING-SKILL.md)** — Smart project discovery and automated setup for empty projects
+- **[AI-CONTEXT.md](AI-CONTEXT.md)** — 30-second quick reference for AI assistants
 
-**For GitHub Copilot Chat:**
-```
-#file:telo3/AI-CONTEXT.md
-Follow Telo3 system for project context.
-```
+## Telo3 Project Context
 
-**For Claude (standalone):**
-```
-I'm using Telo3 framework. Read telo3/AI-CONTEXT.md 
-for quick reference, then follow the systematic approach.
-```
+The Telo3 project-context system consists of six core documents that maintain persistent state:
 
-**For ChatGPT:**
-```
-Upload telo3/AI-CONTEXT.md
-Use this as project context system.
-```
+1. **[prd.md](templates/prd.md)** — Product requirements and project goals
+2. **[architecture.md](templates/architecture.md)** — System architecture and technical decisions
+3. **[rules.md](templates/rules.md)** — Coding standards and best practices
+4. **[design.md](templates/design.md)** — Design system and UI/UX guidelines
+5. **[tasks.md](templates/tasks.md)** — Implementation roadmap and task tracking
+6. **[memory.md](templates/memory.md)** — Recent decisions and active context
 
-**Universal approach:**
-- Point AI to `telo3/AI-CONTEXT.md` (30-second overview)
-- Reference `telo3/SKILL.md` for complete instructions
-- AI loads project context from your docs folder
+## Supported AI Coding Tools
 
-### 4. Start Coding Systematically
+Telo3 works with any AI coding assistant, including:
 
-AI will now:
-- Read project context before coding
-- Follow your architecture and design system
-- Check security, privacy, accessibility
-- Update documentation automatically
-- Use 80% fewer tokens
+- **Claude** (Anthropic) — Excellent systematic reasoning
+- **ChatGPT** (OpenAI) — Fast prototyping and code generation
+- **GitHub Copilot** — IDE-integrated suggestions
+- **Cursor** — AI-first code editor
+- **Kiro** — AI development environment
+- Any other AI assistant that can read markdown documentation
+
+## Documentation
+
+### Core Documentation
+- **[README.md](README.md)** — This file, Telo3 overview
+- **[SKILL.md](SKILL.md)** — Complete Telo3 instructions for AI
+- **[AI-CONTEXT.md](AI-CONTEXT.md)** — Quick reference guide
+- **[ONBOARDING-SKILL.md](ONBOARDING-SKILL.md)** — Smart onboarding system
+- **[QUICK-START-ONBOARDING.md](QUICK-START-ONBOARDING.md)** — Onboarding quick start
+
+### Quality Framework References
+- [Token Optimization](references/token-optimization.md) — 80% token savings through selective loading
+- [Smart Skill Delegation](references/smart-skill-delegation.md) — Automatic MCP and skill integration
+- [UI Quality](references/ui-quality.md) — Anti-vibe-coding design principles
+- [Security](references/security-quality.md) — OWASP standards and secure coding
+- [Privacy](references/privacy-compliance.md) — GDPR, COPPA, CCPA guidance
+- [Legal](references/legal-compliance.md) — CAN-SPAM, DMCA, compliance
+- [SEO](references/seo-quality.md) — Semantic HTML, Core Web Vitals
+- [Accessibility](references/accessibility-quality.md) — WCAG 2.1 AA standards
+- [Performance](references/performance-quality.md) — LCP, INP, CLS optimization
+- [Document Specification](references/document-specification.md) — Documentation standards
+- [Workflow](references/workflow.md) — AI behavior patterns
+- [AI Behavior](references/ai-behavior.md) — Decision-making frameworks
+- [Project Audit](references/project-audit.md) — Quality assessment checklist
 
 ---
 
-## 📚 The 6-Document System
+## Author
 
-### Core Documents
+**Telo3** is created and maintained by **[Jeet (@jeet1511)](https://github.com/jeet1511)**.
 
-| Document | Purpose | When to Update |
-|----------|---------|----------------|
-| **prd.md** | WHAT & WHY - Requirements, vision, users | When requirements change |
-| **architecture.md** | HOW it's built - Tech stack, structure | When architecture changes |
-| **rules.md** | HOW to code - Standards, security, testing | When standards evolve |
+- GitHub: [@jeet1511](https://github.com/jeet1511)
+- Repository: [github.com/Jeet1511/telo3](https://github.com/Jeet1511/telo3)
+- Issues: [github.com/Jeet1511/telo3/issues](https://github.com/Jeet1511/telo3/issues)
+
+---
+
+## License
+
+Telo3 is open source software licensed under the **[MIT License](LICENSE)**.
+
+You are free to use, modify, and distribute Telo3 for any purpose, including commercial projects.
+
+---
 | **design.md** | HOW it looks - Visual language, components | When design patterns change |
 | **tasks.md** | WHAT remains - Implementation backlog | Weekly or after work |
 | **memory.md** | CURRENT STATE - Recent work, decisions | After important changes |
