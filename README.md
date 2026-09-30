@@ -46,6 +46,7 @@
 
 | Feature | Description | Benefit |
 |---------|-------------|---------|
+| **🤖 Smart Onboarding** | AI detects empty projects, asks smart questions, plans & builds | 0→Production in minutes (NEW!) |
 | **6 Documents** | prd.md, architecture.md, rules.md, design.md, tasks.md, memory.md | Persistent AI memory across sessions |
 | **AI-CONTEXT.md** | 30-second quick reference | AI understands instantly |
 | **Selective Loading** | Read only what's needed | Minimize token usage |
@@ -117,6 +118,16 @@ cp -r telo3/templates/* ./project-context/
 ```
 
 ### 3. Tell Your AI (Works with ANY AI)
+
+**🆕 For Empty/New Projects (Smart Onboarding):**
+```
+Use Telo3 onboarding from ~/telo3/ - this is a new project
+```
+*AI will ask smart questions, plan architecture, and build automatically!*
+
+---
+
+**For Existing Projects:**
 
 **For Kiro IDE:**
 ```

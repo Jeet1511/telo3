@@ -18,6 +18,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integration guides for popular AI coding assistants
 - Video tutorials and documentation
 - Community-contributed templates
+
+---
+
+## [5.0.0] - 2024-09-30
+
+### 🚀 Major Feature: Smart Onboarding System
+
+**Added:**
+- **ONBOARDING-SKILL.md** - Intelligent project discovery and planning system
+  - Auto-detects empty projects and initiates smart conversation
+  - 4-phase system: Discovery → Planning → Implementation → Handoff
+  - Caveman-style efficient questioning (no information overload)
+  - Technology recommendation engine with pre-built stack templates
+  - Skill discovery system that finds existing tools/MCP servers
+  - Smart task ordering and parallel execution
+  - Quality gates at each milestone
+  - Token-optimized status updates
+
+- **QUICK-START-ONBOARDING.md** - Quick reference guide for onboarding feature
+  - Usage examples for developers and AI assistants
+  - Configuration options
+  - Troubleshooting guide
+  - Time estimates for common project types
+
+**Features:**
+- 🤖 AI automatically asks: "What u building?" when detecting empty project
+- 🧠 Extracts requirements from conversational responses (no long forms)
+- 🔍 Searches for enhancement skills (figma, stripe, auth, etc.)
+- 📋 Creates all 6 Telo3 docs automatically based on conversation
+- ⚡ Builds complete projects in 10-45 minutes with user approval
+- 🎯 Smart delegation to specialized skills/MCP servers when available
+- 📊 Technology templates for: SaaS, Mobile, API, Real-time, AI-powered apps
+- 🔄 Continuous documentation updates (memory.md tracks all decisions)
+
+**Philosophy:**
+> "AI should ask smart questions, make good decisions, and build fast.  
+> Not waste time asking 50 questions or building wrong thing."
+
+**Time Savings:**
+- Traditional setup: 4-5 hours (boilerplate, config, structure)
+- Telo3 onboarding: 10 minutes (answer 3 questions, AI does rest)
+
+**Updated:**
+- README.md - Added smart onboarding to features table
+- Installation guide - Added onboarding activation instructions
+
+---
 - Multi-language support (i18n)
 - Visual documentation generator
 

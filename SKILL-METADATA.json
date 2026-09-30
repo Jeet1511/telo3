@@ -1,7 +1,7 @@
 {
   "name": "Telo3",
-  "version": "1.0.0",
-  "description": "Elite AI development framework that transforms coding agents from vibe coders into systematic engineers. 6-document system + quality frameworks + token optimization + smart delegation. Stop AI hallucination, architectural drift, and security mistakes.",
+  "version": "5.0.0",
+  "description": "Elite AI development framework with smart onboarding. AI detects empty projects, asks smart questions, and builds production-ready code. 6-document system + 11 quality frameworks + token optimization + intelligent skill delegation. Transform any AI into systematic engineer.",
   "author": {
     "name": "Jeet",
     "github": "jeet1511",
@@ -10,6 +10,11 @@
   "keywords": [
     "ai-coding",
     "ai-agent",
+    "smart-onboarding",
+    "project-planning",
+    "empty-project",
+    "auto-setup",
+    "intelligent-conversation",
     "project-context",
     "ai-memory",
     "systematic-engineering",
