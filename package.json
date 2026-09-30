@@ -91,6 +91,7 @@
   },
   "homepage": "https://github.com/Jeet1511/telo3#readme",
   "files": [
+    "skills/",
     "templates/",
     "references/",
     "scripts/",
