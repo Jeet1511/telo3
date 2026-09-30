@@ -136,7 +136,7 @@ Telo3 supports multiple communication modes optimized for different use cases:
 
 ## Installation
 
-Telo3 is a universal framework that works in any development environment.
+Telo3 is available via npm and GitHub. Choose your preferred installation method:
 
 ### Install via npm (Recommended)
 
@@ -147,6 +147,8 @@ npm install -g telo3-ai
 # Or install in your project
 npm install telo3-ai
 ```
+
+**Package:** https://www.npmjs.com/package/telo3-ai
 
 ### Or Clone from GitHub
 
