@@ -1,6 +1,15 @@
+---
+name: Telo3
+version: 5.0.1
+description: AI development framework with project-context system, quality frameworks, and systematic engineering practices
+author: Jeet (@jeet1511)
+license: MIT
+repository: https://github.com/Jeet1511/telo3
+---
+
 # Telo3 — AI Development Skill
 
-**Version:** 1.0.0  
+**Version:** 5.0.1  
 **Purpose:** Make AI coding agents understand, build, maintain, audit, secure, optimize, and document software projects systematically instead of "vibe coding."  
 **Created by:** [Jeet (@Jeet1511)](https://github.com/Jeet1511)  
 **Repository:** https://github.com/Jeet1511/telo3
