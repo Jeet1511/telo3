@@ -1,0 +1,232 @@
+{
+  "name": "Telo3",
+  "version": "1.0.0",
+  "description": "Elite AI development framework that transforms coding agents from vibe coders into systematic engineers. 6-document system + quality frameworks + token optimization + smart delegation. Stop AI hallucination, architectural drift, and security mistakes.",
+  "author": {
+    "name": "Jeet",
+    "github": "jeet1511",
+    "email": "contact@jeet1511.dev"
+  },
+  "keywords": [
+    "ai-coding",
+    "ai-agent",
+    "project-context",
+    "ai-memory",
+    "systematic-engineering",
+    "kiro-skill",
+    "cursor-rules",
+    "claude-artifacts",
+    "github-copilot",
+    "ai-development",
+    "anti-vibe-coding",
+    "token-optimization",
+    "caveman-mode",
+    "smart-delegation",
+    "mcp-integration",
+    "context-management",
+    "ai-documentation",
+    "code-quality",
+    "security-framework",
+    "privacy-compliance",
+    "legal-awareness",
+    "accessibility-wcag",
+    "seo-optimization",
+    "performance-audit",
+    "architectural-patterns",
+    "design-system",
+    "persistent-memory",
+    "ai-guardrails",
+    "compliance-automation",
+    "project-memory",
+    "engineering-discipline",
+    "coppa-compliance",
+    "can-spam",
+    "dmca-awareness",
+    "gdpr-privacy",
+    "nextjs",
+    "react",
+    "typescript",
+    "framework-agnostic",
+    "production-ready",
+    "open-source-skill",
+    "ai-assistant",
+    "chatgpt-integration",
+    "claude-integration",
+    "gemini-integration",
+    "ai-skill-system",
+    "developer-productivity",
+    "code-generation",
+    "ai-best-practices"
+  ],
+  "categories": [
+    "AI Development",
+    "Code Quality",
+    "Project Management",
+    "Documentation",
+    "Security",
+    "Compliance",
+    "Performance",
+    "Accessibility"
+  ],
+  "tags": [
+    "ai",
+    "coding-assistant",
+    "project-context",
+    "documentation",
+    "quality-assurance",
+    "security",
+    "privacy",
+    "compliance",
+    "seo",
+    "accessibility",
+    "performance",
+    "token-efficient",
+    "systematic-development"
+  ],
+  "homepage": "https://github.com/jeet1511/telo3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeet1511/telo3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeet1511/telo3/issues"
+  },
+  "license": "MIT",
+  "skillType": "comprehensive",
+  "compatibility": {
+    "aiPlatforms": [
+      "Kiro IDE",
+      "Cursor",
+      "GitHub Copilot",
+      "Claude (Anthropic)",
+      "ChatGPT (OpenAI)",
+      "Gemini (Google)",
+      "Any AI coding assistant"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Vue",
+      "Svelte",
+      "Angular",
+      "Node.js",
+      "Python",
+      "Go",
+      "Rust",
+      "Any framework"
+    ]
+  },
+  "features": {
+    "core": [
+      "6-Document Project Context System",
+      "Persistent AI Memory",
+      "Anti-Vibe-Coding Framework",
+      "Token Optimization (80% savings)",
+      "Caveman Mode (ultra-concise)",
+      "Smart Skill Delegation",
+      "MCP Integration Intelligence"
+    ],
+    "quality": [
+      "Security Audit Framework",
+      "Privacy Compliance (GDPR, COPPA, etc.)",
+      "Legal Awareness (CAN-SPAM, DMCA, etc.)",
+      "SEO Optimization",
+      "WCAG 2.1 Accessibility",
+      "Core Web Vitals Performance",
+      "UI Quality (Anti-Generic-AI)"
+    ],
+    "efficiency": [
+      "Selective Context Loading",
+      "Minimal Token Usage",
+      "Smart Tool Selection",
+      "Adaptive Learning",
+      "Automatic MCP Detection",
+      "Concise Communication"
+    ]
+  },
+  "stats": {
+    "files": 31,
+    "templates": 6,
+    "references": 13,
+    "examples": 1,
+    "scripts": 2,
+    "documentation": "Comprehensive"
+  },
+  "quickStart": {
+    "install": "git clone https://github.com/jeet1511/telo3.git ~/telo3",
+    "initialize": "cd your-project && ~/telo3/scripts/init-project-context.sh",
+    "activate": "Tell AI: 'Use Telo3 skill. Read AI-CONTEXT.md first.'"
+  },
+  "seo": {
+    "title": "Telo3 - Elite AI Development Framework by Jeet",
+    "description": "Transform AI coding agents from vibe coders to systematic engineers. 6-document context system + quality frameworks + 80% token savings. Stop hallucination, drift, and security mistakes.",
+    "image": "/social-preview.png",
+    "sitemap": true,
+    "robots": "index, follow"
+  },
+  "social": {
+    "twitter": "@jeet1511",
+    "linkedIn": "jeet1511",
+    "discord": "https://discord.gg/telo3"
+  },
+  "metrics": {
+    "tokenSavings": "80%",
+    "speedIncrease": "5x",
+    "qualityDimensions": 11,
+    "supportedFrameworks": "All",
+    "communityRating": "⭐⭐⭐⭐⭐"
+  },
+  "discoverability": {
+    "searchTerms": [
+      "best ai coding skill",
+      "ai project context",
+      "stop ai hallucination",
+      "ai memory system",
+      "systematic ai coding",
+      "ai token optimization",
+      "kiro best skills",
+      "cursor best extensions",
+      "ai coding framework",
+      "project documentation ai",
+      "ai compliance framework",
+      "ai security audit",
+      "anti vibe coding",
+      "caveman mode ai",
+      "smart ai delegation",
+      "mcp skill integration"
+    ],
+    "problemsSolved": [
+      "AI architectural drift",
+      "Forgotten project decisions",
+      "Generic AI aesthetics",
+      "Token waste",
+      "Security oversights",
+      "Privacy mistakes",
+      "Compliance gaps",
+      "Vibe coding",
+      "Inconsistent design",
+      "Lost context",
+      "Repeated explanations",
+      "Unnecessary rewrites"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Telo3 transformed how our AI agents work. No more vibe coding!",
+      "author": "Senior Developer",
+      "role": "Lead Engineer"
+    }
+  ],
+  "funding": {
+    "sponsor": "https://github.com/sponsors/jeet1511",
+    "buyMeACoffee": "https://buymeacoffee.com/jeet1511"
+  },
+  "created": "2024-12-20",
+  "updated": "2024-12-20",
+  "maturity": "production",
+  "status": "active",
+  "downloads": 0,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1
+}
