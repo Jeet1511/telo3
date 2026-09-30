@@ -1,0 +1,58 @@
+# Telo3 - Systematic Engineering Framework
+# Auto-loaded by Windsurf IDE
+
+## Project Context System
+
+Before making changes, read:
+1. project-context/prd.md (what & why)
+2. project-context/architecture.md (how it's built)
+3. project-context/rules.md (coding standards)
+4. project-context/design.md (UI/UX system)
+5. project-context/tasks.md (current work)
+6. project-context/memory.md (recent context)
+
+## Quality Frameworks
+
+Enforce production standards:
+- Security: Input validation, auth, secrets management
+- Privacy: GDPR, COPPA, data protection
+- Accessibility: WCAG 2.1 Level AA compliance
+- Performance: LCP < 2.5s, INP < 200ms, CLS < 0.1
+- SEO: Semantic markup, meta tags, sitemaps
+- Legal: CAN-SPAM, DMCA, terms compliance
+
+## Efficiency Mode
+
+Token optimization enabled (80% savings):
+- Selective context loading
+- Brief, clear communication
+- Update docs silently
+- Status: ✅/🔨/🐛/📝 [action]
+
+## Smart Delegation
+
+Check for specialized skills before implementing:
+- UI/Design → figma skill
+- Payments → stripe MCP
+- Auth → authentication skills
+- API docs → openapi tools
+
+## Anti-Patterns to Avoid
+
+❌ Generic "AI aesthetics" (purple/black, excessive gradients)
+❌ Random architectural decisions
+❌ Forgetting established patterns
+❌ Creating fake statistics
+❌ Ignoring design system
+
+## Update Pattern
+
+After significant changes:
+- Update memory.md with decisions
+- Check architecture.md alignment
+- Verify rules.md compliance
+- Document in tasks.md
+
+Telo3 provides persistent AI memory and systematic engineering practices.
+
+Repository: https://github.com/Jeet1511/telo3

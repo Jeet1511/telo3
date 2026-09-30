@@ -1,0 +1,58 @@
+{
+  "name": "Telo3",
+  "version": "5.0.0",
+  "type": "ai-skill",
+  "framework": "universal",
+  "author": "Jeet (@jeet1511)",
+  "description": "AI development framework with project-context system, quality frameworks, and systematic engineering practices",
+  "repository": "https://github.com/Jeet1511/telo3",
+  "homepage": "https://github.com/Jeet1511/telo3",
+  "license": "MIT",
+  "main": "SKILL.md",
+  "files": {
+    "skill": "SKILL.md",
+    "context": "AI-CONTEXT.md",
+    "onboarding": "ONBOARDING-SKILL.md",
+    "metadata": "SKILL-METADATA.json"
+  },
+  "compatibility": {
+    "ides": [
+      "cursor",
+      "windsurf",
+      "kiro",
+      "vscode",
+      "any"
+    ],
+    "aiModels": [
+      "claude",
+      "gpt-4",
+      "gpt-3.5",
+      "chatgpt",
+      "github-copilot",
+      "any"
+    ]
+  },
+  "features": [
+    "project-context-management",
+    "persistent-memory",
+    "quality-frameworks",
+    "token-optimization",
+    "smart-onboarding",
+    "anti-vibe-coding"
+  ],
+  "keywords": [
+    "telo3",
+    "ai-skill",
+    "project-context",
+    "systematic-engineering",
+    "quality-frameworks",
+    "token-optimization"
+  ],
+  "autoDetect": true,
+  "activationPatterns": [
+    ".cursorrules",
+    ".windsurfrules",
+    "project-context/",
+    "SKILL.md"
+  ]
+}

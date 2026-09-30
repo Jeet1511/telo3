@@ -1,0 +1,96 @@
+{
+  "schema": "ai-skill-registry-v1",
+  "skill": {
+    "id": "telo3",
+    "name": "Telo3",
+    "displayName": "Telo3 - AI Development Framework",
+    "version": "5.0.0",
+    "description": "Systematic engineering framework for AI coding agents with persistent memory, quality frameworks, and 80% token optimization",
+    "author": {
+      "name": "Jeet",
+      "github": "jeet1511",
+      "url": "https://github.com/jeet1511"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Jeet1511/telo3"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/Jeet1511/telo3",
+    "documentation": "https://github.com/Jeet1511/telo3#readme",
+    "category": "development-framework",
+    "tags": [
+      "ai-development",
+      "project-context",
+      "systematic-engineering",
+      "quality-frameworks",
+      "token-optimization",
+      "anti-vibe-coding",
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "capabilities": {
+      "projectContext": true,
+      "persistentMemory": true,
+      "qualityFrameworks": true,
+      "tokenOptimization": true,
+      "smartOnboarding": true,
+      "skillDelegation": true
+    },
+    "compatibility": {
+      "aiPlatforms": ["claude", "gpt-4", "gpt-3.5", "github-copilot", "universal"],
+      "ides": ["cursor", "windsurf", "kiro", "vscode", "any"],
+      "languages": ["javascript", "typescript", "python", "go", "rust", "any"]
+    },
+    "installation": {
+      "npm": "npm install -g telo3-ai",
+      "git": "git clone https://github.com/Jeet1511/telo3.git",
+      "instructions": "https://github.com/Jeet1511/telo3#installation"
+    },
+    "entryPoints": {
+      "main": "SKILL.md",
+      "quickStart": "AI-CONTEXT.md",
+      "onboarding": "ONBOARDING-SKILL.md"
+    },
+    "autoDetection": {
+      "enabled": true,
+      "patterns": [
+        ".cursorrules",
+        ".windsurfrules",
+        "project-context/prd.md",
+        "project-context/architecture.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    "features": [
+      {
+        "name": "6-Document Context System",
+        "description": "Persistent project memory through prd, architecture, rules, design, tasks, memory"
+      },
+      {
+        "name": "11 Quality Frameworks",
+        "description": "Security, privacy, accessibility, SEO, performance, legal compliance"
+      },
+      {
+        "name": "Token Optimization",
+        "description": "80% reduction through selective loading and caveman mode"
+      },
+      {
+        "name": "Smart Onboarding",
+        "description": "Automated project discovery and setup for empty codebases"
+      },
+      {
+        "name": "Anti-Vibe-Coding",
+        "description": "Prevents generic AI aesthetics and enforces design systems"
+      }
+    ],
+    "metrics": {
+      "tokenSavings": "80%",
+      "qualityDimensions": 11,
+      "documentTypes": 6
+    }
+  }
+}

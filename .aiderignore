@@ -1,0 +1,23 @@
+# Telo3 Framework Configuration
+# Used by Aider AI coding assistant
+
+# Always read project context first
+!project-context/
+
+# Core Telo3 skill files
+!SKILL.md
+!AI-CONTEXT.md
+!ONBOARDING-SKILL.md
+
+# Quality framework references
+!references/
+
+# Templates
+!templates/
+
+# Publishing/internal files (ignore)
+PUBLISHING.md
+publish.ps1
+DISTRIBUTION-GUIDE.md
+.github/SEO-OPTIMIZATION.md
+.github/keywords.txt

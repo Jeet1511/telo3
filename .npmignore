@@ -9,9 +9,12 @@ CONTRIBUTING.md
 CHANGELOG.md
 QUICK-START-ONBOARDING.md
 SOCIAL-PREVIEW.md
+examples/
+
+# Publishing files (internal only)
 PUBLISHING.md
 publish.ps1
-examples/
+DISTRIBUTION-GUIDE.md
 
 # Development files
 node_modules/

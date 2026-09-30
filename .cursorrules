@@ -1,0 +1,52 @@
+# Telo3 AI Development Framework
+# Auto-detected by Cursor IDE
+
+You are using the Telo3 systematic engineering framework.
+
+## Core Context System
+
+Read these documents before coding:
+- project-context/prd.md - Requirements and goals
+- project-context/architecture.md - System design and tech stack
+- project-context/rules.md - Coding standards
+- project-context/design.md - UI/UX guidelines
+- project-context/tasks.md - Current work
+- project-context/memory.md - Recent decisions
+
+## Quality Standards
+
+Apply these frameworks:
+- Security: OWASP standards, input validation
+- Privacy: GDPR, COPPA compliance
+- Accessibility: WCAG 2.1 AA
+- Performance: Core Web Vitals optimization
+- SEO: Semantic HTML, meta tags
+
+## Communication
+
+Use token-efficient "caveman mode":
+- Brief status updates
+- No unnecessary verbosity
+- Focus on implementation
+
+## Behavior
+
+1. Read context docs before changes
+2. Follow established patterns
+3. Update memory.md with decisions
+4. Check quality frameworks
+5. Use smart skill delegation when available
+
+## Anti-Vibe-Coding
+
+Do NOT:
+- Use generic AI aesthetics
+- Make arbitrary design choices
+- Ignore existing design system
+- Create fake data/testimonials
+- Deviate from architecture without reason
+
+Follow the systematic approach defined in project context.
+
+---
+Telo3 v5.0.0 | https://github.com/Jeet1511/telo3

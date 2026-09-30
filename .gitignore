@@ -1,0 +1,27 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Publishing files (internal only)
+PUBLISHING.md
+publish.ps1
+DISTRIBUTION-GUIDE.md
+.github/SEO-OPTIMIZATION.md
+
+# Temp
+*.tmp
+tmp/
+temp/
