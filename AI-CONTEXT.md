@@ -1,3 +1,12 @@
+---
+name: Telo3 Quick Reference
+version: 5.0.2
+description: 30-second quick reference guide for AI assistants
+author: Jeet (@jeet1511)
+license: MIT
+repository: https://github.com/Jeet1511/telo3
+---
+
 # AI Context — Quick Reference
 
 > **Ultra-concise project context for AI agents. Read this FIRST (30 seconds).**
