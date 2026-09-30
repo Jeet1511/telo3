@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Telo3 AI Development Framework",
+  "alternateName": "Telo3 - AI Coding Assistant Context Management System",
+  "description": "Comprehensive project context management system for AI coding assistants including Claude, GPT-4, GitHub Copilot, Cursor. Systematic software engineering framework with integrated quality assurance, security compliance, accessibility standards, and performance optimization specifically designed for artificial intelligence development agents.",
+  "keywords": [
+    "ai coding assistant",
+    "claude development framework",
+    "gpt-4 project context",
+    "github copilot tools",
+    "cursor ai rules",
+    "systematic software engineering",
+    "project documentation ai",
+    "code quality framework",
+    "ai agent memory system",
+    "context management ai",
+    "software development automation",
+    "artificial intelligence coding",
+    "machine learning project setup",
+    "ai developer tools",
+    "coding agent framework",
+    "chatgpt coding assistant",
+    "ai project planning",
+    "empty project setup",
+    "intelligent onboarding system",
+    "technology recommendation engine"
+  ],
+  "programmingLanguage": [
+    "JavaScript",
+    "Python",
+    "TypeScript",
+    "Go",
+    "Rust",
+    "Java",
+    "PHP",
+    "Ruby",
+    "C++",
+    "C#",
+    "Swift",
+    "Kotlin"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Jeet",
+    "url": "https://github.com/jeet1511",
+    "sameAs": [
+      "https://github.com/jeet1511"
+    ]
+  },
+  "datePublished": "2024-09-30",
+  "dateModified": "2024-09-30",
+  "version": "5.0.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "codeRepository": "https://github.com/Jeet1511/telo3",
+  "url": "https://github.com/Jeet1511/telo3",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Development Framework",
+  "operatingSystem": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "Cross-platform"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "softwareVersion": "5.0.0",
+  "softwareRequirements": "Any AI coding assistant (Claude, GPT-4, GitHub Copilot, Cursor, Kiro)",
+  "releaseNotes": "Smart onboarding system with intelligent project discovery and automated planning",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "featureList": [
+    "Smart AI onboarding for empty projects",
+    "6-document project context system",
+    "11 quality frameworks (security, accessibility, SEO, performance)",
+    "Token optimization up to 80%",
+    "Universal AI compatibility",
+    "Smart skill delegation",
+    "Automated documentation generation",
+    "Technology recommendation engine",
+    "Production-ready templates"
+  ],
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "WCAG 2.1 Accessibility Guidelines",
+      "url": "https://www.w3.org/WAI/WCAG21/quickref/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "GDPR Compliance Framework",
+      "url": "https://gdpr.eu/"
+    }
+  ],
+  "targetProduct": {
+    "@type": "SoftwareApplication",
+    "name": "AI Coding Assistants",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform"
+  }
+}
