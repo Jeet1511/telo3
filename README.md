@@ -136,19 +136,34 @@ Telo3 supports multiple communication modes optimized for different use cases:
 
 ## Installation
 
-Telo3 is available via npm and GitHub. Choose your preferred installation method:
+Telo3 is available via npm, skillpm, and GitHub.
 
-### Install via npm (Recommended)
+### Install via npm
 
 ```bash
-# Install globally
+# Install globally (recommended)
 npm install -g telo3-ai
 
 # Or install in your project
 npm install telo3-ai
+
+# Or use npx (no installation needed)
+npx telo3-ai init
 ```
 
 **Package:** https://www.npmjs.com/package/telo3-ai
+
+### Install via skillpm
+
+```bash
+# Install as AI skill
+npx skillpm install telo3-ai
+
+# List installed skills
+npx skillpm list
+```
+
+**Registry:** https://skillpm.dev
 
 ### Or Clone from GitHub
 
