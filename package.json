@@ -1,6 +1,6 @@
 {
   "name": "telo3-ai",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "AI development framework and project-context system for coding agents. Provides persistent memory, quality frameworks, and systematic engineering practices for AI assistants like Claude, ChatGPT, GitHub Copilot, and Cursor.",
   "main": "index.js",
   "type": "module",
