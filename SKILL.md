@@ -1,6 +1,6 @@
 ---
-name: Telo3
-version: 5.0.1
+name: telo3-framework
+version: 5.0.6
 description: AI development framework with project-context system, quality frameworks, and systematic engineering practices
 author: Jeet (@jeet1511)
 license: MIT

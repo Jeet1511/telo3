@@ -1,6 +1,6 @@
 ---
-name: Telo3 Quick Reference
-version: 5.0.2
+name: telo3-quick-reference
+version: 5.0.6
 description: 30-second quick reference guide for AI assistants
 author: Jeet (@jeet1511)
 license: MIT
