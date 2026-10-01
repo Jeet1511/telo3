@@ -1,6 +1,6 @@
 ---
-name: Telo3 Onboarding
-version: 5.0.1
+name: telo3-onboarding
+version: 5.0.4
 description: Smart project discovery and automated setup for empty codebases
 author: Jeet (@jeet1511)
 license: MIT
@@ -8,7 +8,8 @@ repository: https://github.com/Jeet1511/telo3
 ---
 
 # Telo3 Smart Onboarding System
-**Author:** Jeet (@Jeet1511)  
+**Author:** Jeet (@Jeet1511)
+**Version:** 5.0.4  
 **Version:** 3.0.0  
 **Purpose:** Intelligent project discovery, planning, and implementation for empty codebases
 
