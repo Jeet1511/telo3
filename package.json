@@ -1,6 +1,6 @@
 {
   "name": "telo3-ai",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "Always-on engineering contract for AI coding agents: persistent project context, anti-slop discipline, measured token efficiency, and security/privacy/design quality. Mention telo3 once; it stays active.",
   "main": "index.js",
   "type": "module",
@@ -13,6 +13,7 @@
     "status": "node cli.js status",
     "activate": "node cli.js activate",
     "test": "node --test test/*.test.js",
+    "postinstall": "node scripts/postinstall.mjs",
     "verify:release": "node scripts/verify-release.mjs",
     "prepublishOnly": "npm test && npm run verify:release"
   },
@@ -59,6 +60,7 @@
     "templates/",
     "references/",
     "hooks/",
+    "scripts/postinstall.mjs",
     "cli.js",
     "index.js",
     "README.md",

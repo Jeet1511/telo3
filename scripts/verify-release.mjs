@@ -23,7 +23,7 @@ try {
   temp = mkdtempSync(join(root, '.npm-verification-'));
   const [packed] = JSON.parse(npm(['pack', '--ignore-scripts', '--json', '--pack-destination', temp]));
   const paths = new Set(packed.files.map(file => file.path));
-  const required = ['package.json', 'README.md', 'LICENSE', 'SKILL.md', 'cli.js', 'index.js', 'bootstrap/TELO3.md', 'src/install.js', 'src/paths.js', 'hooks/inject-contract.mjs', 'hooks/session-start.example.json'];
+  const required = ['package.json', 'README.md', 'LICENSE', 'SKILL.md', 'cli.js', 'index.js', 'bootstrap/TELO3.md', 'src/install.js', 'src/paths.js', 'scripts/postinstall.mjs', 'hooks/inject-contract.mjs', 'hooks/session-start.example.json'];
   for (const file of required) assert.ok(paths.has(file), `Missing archive asset: ${file}`);
   for (const file of paths) {
     assert.ok(!/(^|\/)(?:_backup[^/]*|test|tests|examples|releases|node_modules|\.env|\.github)(?:\/|$)/.test(file), `Unnecessary archive file: ${file}`);

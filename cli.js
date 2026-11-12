@@ -250,8 +250,10 @@ switch (command) {
     console.log(`Telo3 v${getVersion()}`);
     break;
   case 'help':
-  case undefined:
     console.log(HELP);
+    break;
+  case undefined:
+    cmdActivate(rest);
     break;
   default:
     console.error(`Unknown command: ${command}`);

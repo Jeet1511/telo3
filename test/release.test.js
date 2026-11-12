@@ -186,7 +186,8 @@ test('release: runtime assets including hooks are explicitly publishable, withou
   assert.ok(!pkg.files.includes('examples/'));
   assert.ok(!pkg.files.includes('SKILL-METADATA.json'));
   assert.ok(!('skillpm' in pkg));
-  assert.ok(!pkg.scripts.postinstall, 'npm install must not write into other projects automatically');
+  assert.equal(pkg.scripts.postinstall, 'node scripts/postinstall.mjs', 'safe additive setup hook');
+  assert.ok(pkg.files.includes('scripts/postinstall.mjs'));
   assert.match(pkg.engines.node, /20/);
 });
 

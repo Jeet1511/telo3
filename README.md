@@ -4,26 +4,19 @@ A chat-first skill for less AI slop, less wasted context, and continuity between
 
 ## Install
 
-Requires Node.js 20+ for the installer; chat activation uses the AI's file tools, not Node.
+In your project, run one short command:
 
 ```bash
-npx telo3-ai@6.1.0 install
+npm i telo3-ai
 ```
 
-This copies the complete skill into your project, independent of npm's temporary cache. It detects existing Qoder, Claude, Gemini or Cursor project folders; otherwise uses the shared `.agents/skills/telo3` directory.
+That's it. The install adds the skill to your project and activates the always-on contract automatically (additive, idempotent, never overwrites your files; skips global installs). Then say **telo3** once in your AI chat.
 
-For a specific host:
+Prefer npx, or a specific builder? `npx telo3-ai` does the same; `npx telo3-ai install --agent qoder` targets a host (`claude`, `cursor`, `gemini`, `copilot`, `codex`, `agents`). Requires Node.js 20+.
 
-```bash
-npx telo3-ai@6.1.0 install --agent qoder
-# alternatives: claude, cursor, gemini, copilot, codex, agents
-```
+The skill is copied into your project, independent of npm's cache. It detects existing Qoder, Claude, Gemini or Cursor folders; otherwise uses the shared `.agents/skills/telo3` directory. Refresh the builder's skill list if it caches discovery. Future sessions resume from project instructions and the short memory summary.
 
-Then type **telo3** in your AI chat. Refresh the host's skill list if it caches discovery. The AI installs a small project instruction block using its file tools, preserves existing instructions, and confirms once. Future sessions resume from project instructions and the short memory summary.
-
-For manual/no-terminal installation, copy this package into the appropriate project's skill directory as `telo3/`, with `SKILL.md`, references, templates and runtime assets intact. Then say **telo3**. Plain web chat without project-file access cannot persist activation by itself.
-
-Optional direct activation: `npx telo3-ai@6.1.0 activate`. This also creates a durable project skill first.
+No terminal at all? Copy this package into the project's skill directory as `telo3/` (with `SKILL.md`, references, templates and runtime assets), then say **telo3**. Plain web chat without project-file access cannot persist activation by itself.
 
 ## Small core, on-demand depth
 

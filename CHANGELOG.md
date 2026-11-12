@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.2.0] - 2026-11-12
+
+### Added
+- One short command: `npm i telo3-ai` now installs the skill and activates the contract in the current project via a safe, additive, idempotent post-install (skips global installs and `TELO3_SKIP`; never overwrites user files; never fails the install).
+- Bare `npx telo3-ai` performs the same install + activate, as a script-gate-independent fallback.
+
+### Changed
+- README/SKILL install instructions lead with `npm i telo3-ai`.
+
 ## [6.1.0] - 2026-11-12
 
 Final release preparation; publication remains a separate authorized action.

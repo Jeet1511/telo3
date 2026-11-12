@@ -17,7 +17,7 @@ Use your file tools; the user need not run commands.
 4. Reuse existing context in `project-context/`, `docs/project-context/`, or root. For substantial work, create missing doc skeletons from `templates/` and fill only evidenced information. A one-word activation does not authorize inventing a product or application code.
 5. Confirm once. Future sessions use the host's project instructions, without another keyword. A host with no file/instruction support cannot persist activation; state that limit, not fictitious success.
 
-Optional equivalent: `node <skill-dir>/cli.js activate <project>`. It first installs a durable project skill; `install [dir] --agent <host>` installs without activation. No auto-executing npm install scripts or hidden network calls.
+Optional equivalent: `node <skill-dir>/cli.js activate <project>`. It first installs a durable project skill; `install [dir] --agent <host>` installs without activation. The npm post-install only adds the skill and contract to the current project (additive, idempotent, never clobbers; skips global installs and opt-out); no network calls.
 
 ## Restore context without bloat
 
