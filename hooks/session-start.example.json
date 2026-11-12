@@ -1,0 +1,15 @@
+{
+  "_comment": "Optional. Merge this into your Claude-Code-style settings (e.g. .claude/settings.json) to inject the Telo3 contract deterministically at SessionStart. Adjust the command path to where Telo3 lives. The AGENTS.md block from `telo3 activate` is the portable primary and works without this.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./.claude/skills/telo3/hooks/inject-contract.mjs"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,378 +1,95 @@
 # Legal & Compliance Awareness
+**Load when:** building age gates, marketing emails, subscriptions/auto-renewals, user-generated content, or any feature touching personal data or regulated industries.
 
-> **IMPORTANT:** This is a decision-support and engineering tool, NOT legal advice. This system helps identify potentially applicable legal/compliance considerations but does NOT replace qualified legal counsel. Always verify current legal requirements with appropriate professionals before claiming compliance.
+Engineering guidance and decision support, not legal advice. Identify potentially applicable laws; never replace qualified counsel. Laws vary by jurisdiction and change over time — verify current requirements before claiming compliance.
 
----
+## Core Rules
 
-## Core Principles
+- Identify, don't invent: no invented legal requirements, no invented penalties/fines, no claimed universal legal rules.
+- Classify every requirement: **technical** (implementable in code) / **legal** (required by law, jurisdiction-dependent) / **best practice** (recommended, not legally required) / **assumption** (needs verification).
+- Never claim "legally compliant" without proper verification and evidence.
+- Never hardcode penalties, fines, or fees as permanent facts (they change); verify current figures from authoritative sources (e.g., FTC, U.S. Copyright Office) when accuracy matters.
+- Never assume one jurisdiction's rules apply globally; never pretend regulations are simpler than they are.
+- Never pose as a lawyer or law firm, give legal advice, or make definitive legal conclusions.
+- Recommend qualified counsel when compliance matters; document what was implemented (technical) vs. what still needs legal verification.
 
-### 1. Identify, Don't Invent
-- Identify potentially applicable laws and regulations
-- Do NOT invent legal requirements
-- Do NOT invent penalties or fines
-- Do NOT claim universal legal rules
+## Process
 
-### 2. Distinguish Types of Requirements
-- **Technical requirement:** Something that can be implemented in code
-- **Legal requirement:** Something required by law (varies by jurisdiction)
-- **Best practice:** Recommended but not legally required
-- **Assumption:** Needs verification
+1. Identify product functionality.
+2. Flag potentially regulated features (age gates, emails, subscriptions, user content).
+3. Identify jurisdictions: where users are located, where the business is.
+4. Research potentially applicable laws (COPPA, CAN-SPAM, etc.).
+5. Distinguish technical requirements from legal requirements.
+6. Implement technical controls.
+7. Document remaining compliance responsibilities (legal/business verification).
+8. Recommend legal review.
 
-### 3. Verify Before Claiming
-- Do NOT claim "legally compliant" without proper verification
-- Do NOT hardcode penalties that change over time
-- Do NOT assume one jurisdiction's rules apply globally
-- Do NOT pretend regulations are simpler than they are
+## Compliance Areas
 
-### 4. Recommend Legal Review
-When legal compliance matters:
-- Recommend consulting qualified legal counsel
-- Document what was implemented (technical)
-- Note what requires legal verification
-- Distinguish engineering from legal advice
+### Children / Age Restrictions — COPPA (U.S.)
+- Applies when: service directed to children under 13, or actual knowledge of users under 13. Verify jurisdiction and applicability; check current FTC guidance if COPPA may apply.
+- Requirements if applicable: privacy policy; parental notice; parental consent for data collection; parental access to child's information; data security; data retention/deletion.
+- Technical controls: age gate/verification; parental consent mechanism; privacy policy; data minimization for children; deletion mechanism.
+- Distinguish actual requirements from precautionary measures; never hardcode per-violation fines.
+- Record: minimum age (e.g., 13/16/18 or "no restriction"), age verification, parental consent, children's data handling, legal review needed.
 
----
+### Marketing Emails — CAN-SPAM (U.S.)
+- Applies when: commercial messages sent to U.S. recipients. Not the only email law — verify whether GDPR, CASL (Canada), or others apply. Distinguish transactional from marketing emails.
+- Requirements if applicable: clear sender identification; accurate From/To/routing information; non-deceptive subject lines; message identified as advertisement where required.
+- Also required: valid physical postal address; clear opt-out mechanism; honor opt-outs promptly (within 10 business days).
+- Technical controls: unsubscribe link; unsubscribe processing system; suppression list; sender identification; physical address in footer; consent tracking.
+- Never hardcode per-email penalties.
+- Record: email types (transactional/marketing/both), unsubscribe mechanism, sender ID, address inclusion, consent mechanism, legal review needed.
 
-## Legal Compliance Process
+### Subscriptions & Auto-Renewals — U.S. state laws (e.g., California)
+- Applies when: recurring billing, subscription plans, automatic renewals, free trials converting to paid. Requirements vary by state/country; never treat California law as universal or hardcode state requirements as global.
+- Potential requirements: clear disclosure of subscription terms, automatic renewal, and cancellation method; renewal reminders (some jurisdictions); cancellation processing. Material terms clear at signup.
+- Technical controls: prominent display of price, billing frequency, renewal terms, trial duration/conversion, cancellation method; accessible cancellation mechanism; renewal confirmations; receipts.
+- Record: plans, auto-renewal (Yes/No), disclosure location, cancellation method, trial handling, jurisdictions needing legal review.
 
-```
-1. Identify Product Functionality
-   └─> What does the product do?
-
-2. Identify Potentially Regulated Features
-   └─> Age gates, emails, subscriptions, user content, etc.
-
-3. Identify Relevant Jurisdictions
-   └─> Where are users located? Where is the business?
-
-4. Research Applicable Requirements
-   └─> What laws might apply? (COPPA, CAN-SPAM, etc.)
-
-5. Distinguish Technical vs. Legal
-   └─> What can code solve? What needs lawyer review?
-
-6. Implement Technical Controls
-   └─> Build required functionality
-
-7. Document Compliance Responsibilities
-   └─> What still needs legal/business verification?
-
-8. Recommend Legal Review
-   └─> Advise consulting qualified counsel
-```
-
----
-
-## Common Compliance Areas
-
-### Age Restrictions & Children's Privacy
-
-#### When Applicable
-- Service can be used by children
-- Service collects personal information
-- Service has age-based restrictions
-
-#### U.S. Consideration: COPPA (Children's Online Privacy Protection Act)
-- **Applies when:** Service directed to children under 13, or actual knowledge of children under 13
-- **Key requirements (if applicable):**
-  - Privacy policy
-  - Parental notice
-  - Parental consent for data collection
-  - Parental access to child's information
-  - Data security
-  - Data retention/deletion
-
-#### Technical Controls to Consider
-- Age verification or age gate
-- Parental consent mechanism
-- Privacy policy
-- Data minimization for children
-- Deletion mechanism
-
-#### What to Document
-```markdown
-## Age Restrictions
-
-**Minimum age:** [e.g., 13, 16, 18, or "No restriction"]
-**Age verification:** [Implemented / Not required]
-**Parental consent:** [Implemented if required / Not applicable]
-**Children's data handling:** [Describe approach]
-
-**Legal review needed:** [Yes/No]
-```
-
-#### Critical Notes
-- **Do NOT hardcode "$43,280 per violation"** or any specific fine
-- **Do NOT claim** COPPA requirements without verifying jurisdiction and applicability
-- **Do verify** current FTC guidance if COPPA may apply
-- **Do distinguish** between actual requirements and precautionary measures
-
----
-
-### Marketing Emails
-
-#### When Applicable
-- Service sends promotional/marketing emails
-- Service sends commercial messages
-
-#### U.S. Consideration: CAN-SPAM Act
-- **Applies when:** Commercial messages sent to U.S. recipients
-- **Key requirements (if applicable):**
-  - Clear sender identification
-  - Accurate "From," "To," and routing information
-  - Non-deceptive subject lines
-  - Message identified as advertisement where required
-  - Valid physical postal address
-  - Clear opt-out mechanism
-  - Honor opt-outs promptly (10 business days)
-
-#### Technical Controls to Consider
-- Unsubscribe link in emails
-- Unsubscribe processing system
-- Suppression list
-- Sender identification
-- Physical address in footer
-- Consent tracking
-
-#### What to Document
-```markdown
-## Marketing Emails
-
-**Email types:** [Transactional / Marketing / Both]
-**Unsubscribe mechanism:** [Implemented / Not applicable]
-**Sender identification:** [Configured]
-**Physical address:** [Required and included / Not applicable]
-**Consent mechanism:** [Describe]
-
-**Legal review needed:** [Yes/No]
-```
-
-#### Critical Notes
-- **Do NOT hardcode "$46,517 per email"** or any specific penalty
-- **Do NOT assume** CAN-SPAM is the only applicable email law
-- **Do verify** whether GDPR, CASL (Canada), or other laws apply
-- **Do distinguish** transactional from marketing emails
-
----
-
-### Subscriptions & Auto-Renewals
-
-#### When Applicable
-- Recurring billing
-- Subscription plans
-- Automatic renewals
-- Free trials that convert to paid
-
-#### U.S. State Laws (e.g., California automatic renewal laws)
-- Various U.S. states have automatic renewal disclosure requirements
-- Requirements vary by state
-
-#### Potential Requirements
-- Clear disclosure of subscription terms
-- Clear disclosure of automatic renewal
-- Clear cancellation method
-- Renewal reminders (in some jurisdictions)
-- Cancellation processing
-
-#### Technical Controls to Consider
-- Prominent display of:
-  - Price
-  - Billing frequency
-  - Renewal terms
-  - Trial duration and conversion
-  - Cancellation method
-- Accessible cancellation mechanism
-- Renewal confirmation
-- Receipts
-
-#### What to Document
-```markdown
-## Subscriptions
-
-**Subscription types:** [List plans]
-**Auto-renewal:** [Yes/No]
-**Disclosure location:** [Where terms are shown]
-**Cancellation method:** [Describe]
-**Trial handling:** [Describe if applicable]
-
-**Legal review needed:** [Yes - specific jurisdictions]
-```
-
-#### Critical Notes
-- **Do NOT assume** California law applies everywhere
-- **Do NOT hardcode** specific state requirements as universal
-- **Do verify** applicable state/country requirements
-- **Do ensure** material terms are clear at signup
-
----
-
-### User-Generated Content & Copyright
-
-#### When Applicable
-- Users can upload files (images, videos, documents, code)
-- Users can post content
-- Platform hosts third-party content
-
-#### U.S. Consideration: DMCA Safe Harbor (17 U.S.C. § 512)
-- Provides liability protection for online service providers under specific conditions
-
-#### Potential Requirements for DMCA Safe Harbor
-- Designated DMCA agent
-- Agent registration with U.S. Copyright Office
-- Public availability of agent contact information
-- Notice-and-takedown process
-- Counter-notice process
-- Repeat infringer policy
-- No actual knowledge of infringement
-- No financial benefit from infringement
-
-#### Technical Controls to Consider
-- Copyright policy
-- DMCA agent designation
-- Takedown request form
-- Content flagging system
-- Repeat infringer tracking
-- User content licensing terms
-
-#### What to Document
-```markdown
-## User-Generated Content
-
-**Content types:** [Images, videos, text, etc.]
-**Copyright policy:** [Exists / Needed]
-**DMCA agent:** [Designated / Required / Not applicable]
-**Takedown process:** [Implemented / Planned]
-**Repeat infringer policy:** [Implemented / Planned]
-
-**Legal review needed:** [Yes]
-```
-
-#### Critical Notes
-- **Do NOT claim** automatic safe harbor protection
-- **Do NOT hardcode** "$6 registration fee" (fees change)
-- **Do verify** current U.S. Copyright Office requirements
-- **Do NOT assume** DMCA applies outside the U.S.
-- **Do understand** safe harbor has specific technical and procedural requirements
-
----
+### User-Generated Content — DMCA Safe Harbor (17 U.S.C. § 512, U.S. only)
+- Conditional liability protection for online service providers; never claim automatic safe harbor. Safe harbor has specific technical and procedural requirements.
+- Conditions: designated DMCA agent registered with the U.S. Copyright Office; publicly available agent contact information; notice-and-takedown process; counter-notice process; repeat infringer policy; no actual knowledge of infringement; no financial benefit from infringement.
+- Technical controls: copyright policy; DMCA agent designation; takedown request form; content flagging system; repeat infringer tracking; user content licensing terms.
+- Verify current U.S. Copyright Office requirements; never hardcode registration fees (they change); DMCA does not apply outside the U.S.
+- Record: content types, copyright policy status, DMCA agent status, takedown process, repeat infringer policy, legal review needed.
 
 ### Privacy & Data Protection
+- See `privacy-compliance.md`: collection transparency, third-party sharing, cookie/tracking consent, retention/deletion, cross-border transfers, privacy policy.
 
-See `privacy-compliance.md` for detailed privacy considerations.
+## Jurisdictions (verify applicability; never assume universal rules)
 
-Key areas:
-- Personal data collection transparency
-- Third-party data sharing
-- Cookie/tracking consent
-- Data retention and deletion
-- Cross-border data transfers
-- Privacy policy
+| Region | Laws to consider |
+|---|---|
+| U.S. federal | COPPA, CAN-SPAM, DMCA |
+| U.S. states | California, Virginia, Colorado privacy laws; state auto-renewal laws |
+| U.S. industry-specific | HIPAA, GLBA |
+| EU | GDPR, ePrivacy Directive, Digital Services Act, AI Act (emerging) |
+| Canada | PIPEDA, CASL |
+| UK | UK GDPR, DPA 2018 |
+| Australia | Privacy Act |
+| Brazil | LGPD |
 
----
+## Checklist — Any Regulated Feature
 
-## Implementation Checklist
+- [ ] Feature type identified (age restriction, email, subscription, user content, etc.)
+- [ ] Potentially applicable laws researched; relevant jurisdictions identified
+- [ ] Technical requirements distinguished from legal requirements
+- [ ] Technical controls implemented; changed behavior verified
+- [ ] Implemented controls documented; remaining legal/business verification documented
+- [ ] Legal review recommended to user
+- [ ] No "compliant" claim without proper verification
 
-### For ANY Regulated Feature
+## Documentation Template (per compliance area)
 
-- [ ] Identify the feature type (age restriction, email, subscription, user content, etc.)
-- [ ] Research potentially applicable laws
-- [ ] Identify relevant jurisdictions
-- [ ] Distinguish technical requirements from legal requirements
-- [ ] Implement necessary technical controls
-- [ ] Document what was implemented
-- [ ] Document what requires legal verification
-- [ ] Recommend legal review to user
-- [ ] Never claim "compliant" without proper verification
+- Feature description: what the product does
+- Potentially applicable laws (e.g., CAN-SPAM U.S.; GDPR EU if applicable) — verify applicability with counsel
+- Technical controls implemented (e.g., unsubscribe link in all marketing emails, suppression list processing)
+- Remaining responsibilities: jurisdiction-specific requirements, consent review with counsel, physical address confirmation, transactional vs. marketing classification
+- Legal review status: Not started / In progress / Complete
+- Notes: additional context
 
----
-
-## Documentation Template
-
-When documenting compliance considerations:
-
-```markdown
-## [Compliance Area: e.g., Marketing Emails]
-
-### Feature Description
-[What the product does]
-
-### Potentially Applicable Laws
-- [Law 1: e.g., CAN-SPAM (U.S.)]
-- [Law 2: e.g., GDPR (EU) if applicable]
-- [Note: Verify applicability with legal counsel]
-
-### Technical Controls Implemented
-- [Control 1: e.g., Unsubscribe link in all marketing emails]
-- [Control 2: e.g., Suppression list processing]
-
-### Remaining Compliance Responsibilities
-- [ ] Verify applicable jurisdiction-specific requirements
-- [ ] Review consent mechanisms with legal counsel
-- [ ] Confirm physical address requirement
-- [ ] Verify transactional vs. marketing classification
-
-### Legal Review Status
-- [ ] Not started
-- [ ] In progress
-- [ ] Complete
-
-### Notes
-[Additional context]
-```
-
----
-
-## Critical Guardrails
-
-### What AI Agents MUST DO
-
-✅ Identify regulated functionality  
-✅ Research potentially applicable laws  
-✅ Implement technical controls where appropriate  
-✅ Document compliance considerations  
-✅ Distinguish technical from legal requirements  
-✅ Recommend legal counsel when compliance matters  
-✅ Verify current requirements from authoritative sources when accuracy matters  
-
-### What AI Agents MUST NOT DO
-
-❌ Claim "legally compliant" without verification  
-❌ Invent legal requirements  
-❌ Hardcode penalties or fines as permanent facts  
-❌ Assume one jurisdiction's rules apply globally  
-❌ Pretend to be a lawyer or law firm  
-❌ Make definitive legal conclusions  
-❌ Give legal advice  
-
----
-
-## Jurisdiction Considerations
-
-### United States
-- Federal laws (COPPA, CAN-SPAM, DMCA, etc.)
-- State laws (California, Virginia, Colorado privacy laws, etc.)
-- Industry-specific regulations (HIPAA, GLBA, etc.)
-
-### European Union
-- GDPR (General Data Protection Regulation)
-- ePrivacy Directive
-- Digital Services Act
-- AI Act (emerging)
-
-### Other Jurisdictions
-- Canada: PIPEDA, CASL
-- UK: UK GDPR, DPA 2018
-- Australia: Privacy Act
-- Brazil: LGPD
-- Many others
-
-**Key point:** Requirements vary by jurisdiction. Never assume universal rules.
-
----
-
-## When to Escalate to Legal Counsel
-
-Recommend legal review when:
+## Escalate to Legal Counsel When
 
 - Service collects children's information
 - Service sends marketing emails at scale
@@ -384,25 +101,3 @@ Recommend legal review when:
 - Compliance requirements are unclear
 - Penalties for non-compliance are significant
 - Business risk tolerance is low
-
----
-
-## Summary
-
-This skill system helps AI agents:
-
-1. **Identify** potentially applicable legal/compliance considerations
-2. **Implement** appropriate technical controls
-3. **Document** compliance efforts
-4. **Recommend** legal review when appropriate
-5. **Never pretend** to be a lawyer
-
-**Remember:**
-- This is engineering guidance, not legal advice
-- Laws vary by jurisdiction
-- Requirements change over time
-- Verify with qualified legal counsel
-- Document what you implement
-- Don't fabricate compliance claims
-
-**Goal:** Prevent common legal oversights while acknowledging the limits of AI legal knowledge.

@@ -103,7 +103,7 @@
 ### Security TODOs
 - [ ] Add rate limiting (especially auth endpoints)
 - [ ] Audit dependency vulnerabilities monthly
-- [ ] Add CSRF tokens (if moving beyond cookies)
+- [ ] Verify CSRF protection on cookie-authenticated state-changing routes (SameSite policy and origin/token checks as appropriate).
 
 ---
 

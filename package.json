@@ -1,84 +1,46 @@
 {
   "name": "telo3-ai",
-  "version": "5.0.7",
-  "description": "AI development framework and project-context system for coding agents. Provides persistent memory, quality frameworks, and systematic engineering practices for AI assistants like Claude, ChatGPT, GitHub Copilot, and Cursor.",
+  "version": "6.1.0",
+  "description": "Always-on engineering contract for AI coding agents: persistent project context, anti-slop discipline, measured token efficiency, and security/privacy/design quality. Mention telo3 once; it stays active.",
   "main": "index.js",
   "type": "module",
-  "skillpm": {
-    "skills": [
-      {
-        "name": "telo3",
-        "path": "SKILL.md",
-        "description": "Complete Telo3 systematic engineering framework"
-      },
-      {
-        "name": "telo3-onboarding",
-        "path": "ONBOARDING-SKILL.md",
-        "description": "Smart project discovery and automated setup"
-      },
-      {
-        "name": "telo3-context",
-        "path": "AI-CONTEXT.md",
-        "description": "30-second quick reference for AI assistants"
-      }
-    ]
-  },
   "bin": {
-    "telo3": "./cli.js",
-    "telo3-init": "./scripts/init-project-context.sh"
+    "telo3": "./cli.js"
   },
   "scripts": {
-    "init": "./scripts/init-project-context.sh",
-    "validate": "./scripts/validate-project-context.sh"
+    "init": "node cli.js init",
+    "validate": "node cli.js validate",
+    "status": "node cli.js status",
+    "activate": "node cli.js activate",
+    "test": "node --test test/*.test.js",
+    "verify:release": "node scripts/verify-release.mjs",
+    "prepublishOnly": "npm test && npm run verify:release"
   },
   "keywords": [
     "telo3",
+    "ai-skill",
     "ai-coding",
-    "ai-assistant",
-    "ai-development",
-    "claude",
-    "chatgpt",
-    "copilot",
-    "cursor",
+    "coding-agent",
     "project-context",
     "ai-memory",
-    "coding-agent",
-    "systematic-engineering",
-    "code-quality",
-    "ai-framework",
-    "developer-tools",
-    "project-management",
-    "documentation",
-    "context-management",
-    "ai-skills",
-    "smart-onboarding",
-    "token-optimization",
-    "quality-frameworks",
-    "security",
-    "accessibility",
-    "performance",
-    "seo",
-    "privacy",
-    "compliance",
-    "gdpr",
-    "wcag",
+    "context-loss",
+    "anti-slop",
     "anti-vibe-coding",
-    "architectural-patterns",
+    "token-optimization",
+    "systematic-engineering",
+    "agents-md",
+    "claude",
+    "cursor",
+    "copilot",
+    "gemini",
+    "security",
+    "privacy",
+    "accessibility",
     "design-system",
-    "persistent-memory",
-    "mcp-integration",
-    "skill-delegation",
-    "production-ready",
-    "framework-agnostic",
-    "nextjs",
-    "react",
-    "typescript",
-    "python",
-    "golang"
+    "framework-agnostic"
   ],
   "author": {
     "name": "Jeet",
-    "email": "contact@jeet1511.dev",
     "url": "https://github.com/jeet1511"
   },
   "license": "MIT",
@@ -91,20 +53,19 @@
   },
   "homepage": "https://github.com/Jeet1511/telo3#readme",
   "files": [
-    "skills/",
+    "SKILL.md",
+    "bootstrap/",
+    "src/",
     "templates/",
     "references/",
-    "scripts/",
-    "SKILL.md",
-    "AI-CONTEXT.md",
-    "ONBOARDING-SKILL.md",
-    "SKILL-METADATA.json",
+    "hooks/",
     "cli.js",
     "index.js",
+    "README.md",
     "LICENSE"
   ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.0.0"
   },
   "os": [
     "darwin",

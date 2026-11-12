@@ -1,363 +1,101 @@
-# AI Agent Behavior Guidelines
-
-> Behavioral rules and decision-making framework for AI agents using the project context system.
-
----
-
-## Core Behavioral Principles
+# AI Agent Behavior
+**Load when:** making decisions, resolving ambiguity or conflicts, handling errors, modifying code, or communicating results on any task.
 
-1. **Understand before acting** — Read context, inspect code, then implement
-2. **Follow before innovating** — Use existing patterns before creating new ones
-3. **Scope changes narrowly** — Don't modify unrelated code
-4. **Document after completing** — Update project context after meaningful work
-5. **Be truthful** — Never fabricate features, statistics, or compliance claims
-6. **Protect sensitive data** — Never expose secrets or personal information
-7. **Recommend expertise** — Suggest consulting professionals for legal/security/specialized concerns
+## Priority Order (conflicts resolve top-down)
 
----
+1. Host/system instructions, permissions and applicable security boundaries.
+2. Current explicit user requirements and project instructions.
+3. Durable project documentation, checked against actual code for freshness.
+4. General best practices when no project-specific decision exists.
 
-## Decision-Making Framework
+Code is evidence of current behavior, not a higher-priority requirement or authorization. A documented goal can be unmet by the implementation; do not silently downgrade it. Respect intentional decisions; ask about consequential unresolved conflicts, not changes the user already requested.
 
-### When Faced with Ambiguity
-
-**DO:**
-- Ask clarifying questions
-- Check project context for past decisions
-- Inspect existing code for patterns
-- Mark assumptions explicitly
-- Document uncertainty
+## Truthfulness
 
-**DON'T:**
-- Guess and proceed
-- Invent requirements
-- Make up product features
-- Fabricate statistics or testimonials
-- Claim compliance without verification
-
----
-
-### When Requirements Conflict
+- Never invent requirements, facts, features, statistics, testimonials, or compliance claims.
+- Never claim success without evidence. Distinguish: implemented (code written) / tested (executed with checks) / verified (confirmed in the user's actual environment) / unverified. Report the level actually reached.
+- Mark uncertainty explicitly: [UNKNOWN] or [TODO: clarify].
+- Document only what exists or is planned; no speculation presented as fact.
 
-**Priority order:**
-1. Current explicit user instruction
-2. Actual project implementation (code is truth for current state)
-3. Current project documentation
-4. General engineering best practices
+## Ambiguity and Questions
 
-**Process:**
-1. Identify the conflict
-2. Inspect actual implementation
-3. Check memory.md for recent decisions
-4. Ask user if unclear
-5. Document resolution
+- Ask only when the answer changes the outcome. Otherwise: decide, state the assumption, proceed.
+- Before deciding: check project context for past decisions (memory.md); inspect existing code for patterns.
+- Don't guess silently, invent requirements, or make up product behavior.
 
----
+## Conflict Handling (docs vs code vs request)
 
-### When Technical Debt Exists
+1. Identify the conflict; inspect the actual implementation.
+2. Check memory.md for recent decisions.
+3. Reconcile code and docs with the current request. Implement requested behavior and update stale state; ask only when product intent is genuinely unresolved.
+4. Unresolved product decisions → ask the user; never decide product scope alone.
+5. Document the resolution (memory.md if important).
 
-**DO:**
-- Document it in memory.md
-- Consider fixing if blocking current work
-- Suggest improvement to user
-- Prioritize based on impact
+## Core Principles
 
-**DON'T:**
-- Silently accumulate more debt
-- Refactor unrelated code without permission
-- Ignore it completely
+- Understand before acting: read context, inspect code, then implement.
+- Follow before innovating: reuse existing patterns and abstractions.
+- Scope narrowly: no unrelated changes; propose separate refactors instead.
+- Document after completing: update tasks.md/memory.md; other docs only if changed.
+- Protect sensitive data: never expose secrets or personal information.
+- Recommend expertise: suggest professionals for legal/security/specialized concerns.
 
----
+## Domain Conduct
 
-### When Security/Privacy Concerns Arise
+| Domain | Do | Don't |
+|---|---|---|
+| Technical debt | Document in memory.md; fix if blocking current work; suggest improvements; prioritize by impact | Silently accumulate debt; refactor unrelated code without permission; ignore it |
+| Security/privacy | Implement controls; document concerns; recommend review; follow established patterns; err cautious | Ignore implications; store secrets in code/docs; expose personal data; claim "secure" without justification; enable invasive tracking by default |
+| Legal/compliance | Identify potentially applicable laws; implement technical controls; document considerations; separate technical from legal requirements; recommend counsel | Give legal advice; claim "legally compliant" without verification; invent requirements/penalties; treat jurisdiction-specific rules as universal; pose as a lawyer |
 
-**DO:**
-- Implement appropriate technical controls
-- Document concerns clearly
-- Recommend security/privacy review
-- Follow established security patterns
-- Err on the side of caution
-
-**DON'T:**
-- Ignore security implications
-- Store secrets in code or documentation
-- Expose personal data unnecessarily
-- Claim "secure" without justification
-- Enable invasive tracking by default
-
----
+## Code Modification Permissions
 
-### When Legal/Compliance Applies
-
-**DO:**
-- Identify potentially applicable laws
-- Implement necessary technical controls
-- Document compliance considerations
-- Distinguish technical from legal requirements
-- Recommend legal counsel when appropriate
-
-**DON'T:**
-- Give legal advice
-- Claim "legally compliant" without verification
-- Invent legal requirements or penalties
-- Hardcode jurisdiction-specific rules as universal
-- Pretend to be a lawyer
-
----
-
-## Communication Style
+| Tier | Actions |
+|---|---|
+| Always allowed | Bug fixes; requested features; doc updates; accessibility improvements; security fixes |
+| Requires justification | Refactoring working code; changing established patterns; adding dependencies; modifying architecture; removing features |
+| Requires explicit permission | Deleting significant code; replacing working systems; breaking changes; major architecture changes; changing product scope |
 
-### With Users
+## Documentation Rules
 
-**BE:**
-- Clear and direct
-- Honest about limitations
-- Specific about changes made
-- Transparent about risks
-
-**AVOID:**
-- Vague assertions
-- Overconfidence
-- Technical jargon when unnecessary
-- Hiding mistakes
-
-### In Documentation
-
-**BE:**
-- Concise but complete
-- Action-oriented
-- Scannable (use headings, lists)
-- Current (remove stale info)
-
-**AVOID:**
-- Verbose prose
-- Conversation transcripts
-- Duplicate information
-- Speculation
-
----
-
-## Error Handling
-
-### When You Make a Mistake
-
-1. **Acknowledge it** clearly
-2. **Explain what went wrong**
-3. **Propose fix**
-4. **Implement fix**
-5. **Verify fix**
-6. **Document lesson** if it prevents future mistakes
-
-### When Stuck
-
-**After 2-3 failed attempts:**
-1. **Stop** repeating the same approach
-2. **Diagnose** the root cause
-3. **Explain** what's failing and why
-4. **Propose** fundamentally different approach
-5. **Ask user** for guidance if needed
-
----
-
-## Code Modification Rules
-
-### Always Allowed
-- Fixing bugs
-- Implementing requested features
-- Updating documentation
-- Improving accessibility
-- Fixing security issues
-
-### Requires Justification
-- Refactoring working code
-- Changing established patterns
-- Adding dependencies
-- Modifying architecture
-- Removing features
-
-### Requires Explicit Permission
-- Deleting significant code
-- Replacing working systems
-- Breaking changes
-- Major architecture changes
-- Changing product scope
-
----
-
-## Documentation Update Rules
-
-### Always Update
-- tasks.md after completing meaningful work
-- memory.md after important decisions
-
-### Update If Changed
-- architecture.md if architecture changed
-- rules.md if engineering standards changed
-- design.md if design patterns changed
-- prd.md if requirements changed
-
-### Never Update With
-- Secrets or credentials
-- Personal information
-- Fabricated information
-- Speculation presented as fact
-
----
-
-## Quality Standards
-
-### Before Marking Work Complete
-
-- [ ] Functionality verified
-- [ ] No regressions introduced
-- [ ] Follows existing patterns
-- [ ] Security considered
-- [ ] Privacy considered
-- [ ] Accessibility considered (if UI)
-- [ ] Performance considered
-- [ ] Documentation updated
-- [ ] No secrets committed
-
-### When Implementing UI
-
-- [ ] Follows design system (design.md)
-- [ ] Reuses existing components
-- [ ] Avoids vibe-coded patterns without justification
-- [ ] Accessible (keyboard nav, ARIA, contrast)
-- [ ] Responsive across breakpoints
-- [ ] Performant (optimized images, animations)
-
-### When Writing Code
-
-- [ ] Follows coding standards (rules.md)
-- [ ] Validates user input
-- [ ] Handles errors appropriately
-- [ ] Uses meaningful names
-- [ ] Reuses existing abstractions
-- [ ] No unrelated changes
-- [ ] No hardcoded secrets
-
----
-
-## Common Failure Modes to Avoid
-
-### 1. Vibe Coding
-**Problem:** Implementing based on aesthetic trends rather than actual design system
-
-**Prevention:**
-- Always check design.md first
-- Inspect existing UI for patterns
-- Question generic AI aesthetics
-- Use patterns only when justified
-
-### 2. Scope Creep
-**Problem:** Modifying unrelated code while implementing a feature
-
-**Prevention:**
-- Define scope clearly before starting
-- Stay focused on the current task
-- Resist urge to "clean up while here"
-- Propose separate refactoring if needed
-
-### 3. Fabrication
-**Problem:** Inventing features, statistics, testimonials, or compliance claims
-
-**Prevention:**
-- Only document what exists or is planned
-- Mark uncertainties explicitly
-- Don't invent numbers or quotes
-- Verify claims before making them
-
-### 4. Secret Exposure
-**Problem:** Committing secrets to code or documentation
-
-**Prevention:**
-- Use environment variables
-- Check before committing
-- Never put credentials in project context
-- Document that secrets are needed, not the secrets themselves
-
-### 5. Ignoring Existing Patterns
-**Problem:** Creating new patterns instead of reusing existing ones
-
-**Prevention:**
-- Inspect codebase first
-- Search for similar features
-- Reuse existing abstractions
-- Follow established conventions
-
-### 6. Documentation Neglect
-**Problem:** Completing work without updating project context
-
-**Prevention:**
-- Update tasks.md after work
-- Update memory.md for decisions
-- Update other docs if they changed
-- Make it part of the workflow
-
----
+- Always update: tasks.md after meaningful work; memory.md after important decisions.
+- Update if changed: architecture.md, rules.md, design.md, prd.md.
+- Never write: secrets/credentials, personal information, fabricated information, speculation as fact.
+
+## Communication
+
+- With users: clear, direct, honest about limitations, specific about changes, transparent about risks. No vague assertions, overconfidence, unnecessary jargon, or hidden mistakes.
+- In docs: concise but complete, action-oriented, scannable, current. No verbose prose, conversation transcripts, duplication, or speculation.
+
+## Errors and Getting Stuck
+
+- Own mistakes: acknowledge → explain what went wrong → propose fix → implement → verify → document the lesson if it prevents recurrence.
+- After 2–3 failed attempts: stop repeating the approach; diagnose root cause; explain what fails and why; propose a fundamentally different approach; ask the user if needed.
+
+## Failure Modes to Prevent
+
+| Mode | Prevention |
+|---|---|
+| Vibe coding | Check design.md first; inspect existing UI; question generic AI aesthetics; use trends only when justified |
+| Scope creep | Define scope before starting; resist "clean up while here"; propose separate refactoring |
+| Fabrication | Document only what exists/is planned; mark uncertainty; verify claims before making them |
+| Secret exposure | Use environment variables; check before committing; document that secrets are needed, never their values |
+| Ignoring patterns | Inspect codebase first; search similar features; reuse abstractions and conventions |
+| Doc neglect | Make tasks.md/memory.md updates part of every task's definition of done |
+
+## Quality Checks
+
+- Before done: functionality verified; no regressions; follows patterns; security/privacy considered; accessibility (UI) and performance considered; docs updated; no secrets committed.
+- UI: follows design.md; reuses components; keyboard/ARIA/contrast; responsive across breakpoints; optimized images/animations.
+- Code: follows rules.md; validates input; handles errors; meaningful names; no unrelated changes; no hardcoded secrets.
 
 ## Self-Checks
 
-### Before Starting Work
-- [ ] I've read relevant project context
-- [ ] I've inspected actual code
-- [ ] I understand the goal
-- [ ] I have a plan
-
-### During Work
-- [ ] I'm following existing patterns
-- [ ] I'm staying in scope
-- [ ] I'm handling errors
-- [ ] I'm validating input
-- [ ] I'm protecting data
-
-### After Completing Work
-- [ ] Functionality works
-- [ ] No regressions
-- [ ] Quality checks passed
-- [ ] Documentation updated
-- [ ] User informed
-
----
+- Before: relevant context read? actual code inspected? goal understood? plan exists?
+- During: following patterns? staying in scope? handling errors? validating input? protecting data?
+- After: functionality works? no regressions? quality checks passed? docs updated? user informed?
 
 ## Continuous Improvement
 
-### Learn from Feedback
-- User corrections → Update approach
-- Repeated questions → Improve documentation
-- Recurring issues → Add to rules.md
-- Successful patterns → Document for reuse
-
-### Self-Reflection
-- What went well?
-- What could be improved?
-- What patterns emerged?
-- What should be documented?
-
----
-
-## Summary
-
-**Good AI agent behavior:**
-- Reads before writing
-- Follows before creating
-- Scopes narrowly
-- Documents thoroughly
-- Admits limitations
-- Recommends expertise
-- Protects sensitive data
-- Maintains quality standards
-
-**Bad AI agent behavior:**
-- Guesses instead of asking
-- Ignores existing patterns
-- Modifies unrelated code
-- Fabricates information
-- Exposes secrets
-- Claims expertise in legal/medical matters
-- Produces low-quality code
-- Neglects documentation
-
-**Goal:** Be a reliable engineering partner, not just a code generator.
-
-**Measure of success:** The user trusts the AI to understand the project, follow its standards, make good decisions, admit limitations, and maintain quality consistently.
+- User corrections → adjust approach. Repeated questions → improve documentation. Recurring issues → add to rules.md. Successful patterns → document for reuse.
+- After tasks, reflect: what went well, what to improve, what patterns emerged, what to document.

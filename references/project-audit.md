@@ -1,468 +1,107 @@
-# Project Audit Framework
+# Project Audit
+**Load when:** starting work on an existing project, after a significant implementation phase, before a major release, when quality concerns arise, or for periodic review (quarterly or milestone-based).
 
-> Comprehensive audit procedures for systematic project review.
+Run only the dimensions that apply to the project type (matrix below) — never every audit on every project. Audits are constructive, not punitive: identify drift, technical debt, quality issues, and compliance gaps; document findings, prioritize issues, and track resolution. Goal: improvement, not perfection.
 
----
-
-## When to Run an Audit
+## Applicability Matrix
 
-- Starting work on an existing project
-- After significant implementation phase
-- Before major release
-- When quality concerns arise
-- Periodically (quarterly or milestone-based)
-
----
-
-## Audit Categories
-
-### 1. Product Alignment
-### 2. Architecture Consistency
-### 3. Code Quality
-### 4. UI/UX Quality
-### 5. SEO (if applicable)
-### 6. Security
-### 7. Privacy
-### 8. Legal/Compliance
-### 9. Accessibility
-### 10. Performance
-### 11. Documentation
-
----
-
-## 1. Product Alignment Audit
-
-**Check against prd.md:**
-
-- [ ] Implemented features match documented requirements
-- [ ] Scope hasn't drifted from documented goals
-- [ ] Non-goals are still respected
-- [ ] Success criteria are measurable
-- [ ] Product decisions are documented
-
-**Red flags:**
-- Features that don't match PRD
-- Scope creep
-- Forgotten requirements
-- Undocumented product decisions
-
----
-
-## 2. Architecture Consistency Audit
+Y = run · C = conditional (only if the feature/data exists) · – = skip
 
-**Check against architecture.md:**
-
-- [ ] Tech stack matches documentation
-- [ ] File structure follows documented organization
-- [ ] Data flow matches documented patterns
-- [ ] APIs follow documented conventions
-- [ ] External services match documentation
-- [ ] Architectural decisions are followed
-
-**Red flags:**
-- Undocumented technology additions
-- Inconsistent file organization
-- Multiple patterns for the same thing
-- Architectural drift
-- Ignored architectural decisions
-
----
-
-## 3. Code Quality Audit
-
-**Check against rules.md:**
-
-- [ ] Naming conventions are consistent
-- [ ] Code organization follows standards
-- [ ] Functions are appropriately sized
-- [ ] Duplication is minimal
-- [ ] Error handling is present
-- [ ] Comments explain "why" not "what"
-- [ ] Dead code is removed
-- [ ] Dependencies are justified
-
-**Red flags:**
-- Inconsistent naming
-- God functions/classes
-- Copy-paste code
-- Missing error handling
-- Excessive complexity
-- Unjustified dependencies
-
----
-
-## 4. UI/UX Quality Audit
-
-**Check against design.md and ui-quality.md:**
-
-- [ ] Design system is followed consistently
-- [ ] Colors are from documented palette
-- [ ] Typography follows type scale
-- [ ] Spacing uses documented scale
-- [ ] Components reuse existing patterns
-- [ ] No generic AI aesthetic without justification
-- [ ] Interactive patterns are consistent
-- [ ] Responsive behavior works
-
-**Red flags:**
-- Vibe-coded patterns (harsh gradients, excessive effects)
-- Inconsistent component styles
-- Random color choices
-- Inconsistent spacing
-- Duplicated components
-- Generic "AI aesthetic" without purpose
-
-**See `ui-quality.md` for detailed anti-vibe-coding checks.**
-
----
-
-## 5. SEO Audit (if applicable)
-
-**Check against seo-quality.md:**
-
-- [ ] Unique meta titles on all pages
-- [ ] Unique meta descriptions on all pages
-- [ ] Canonical URLs set
-- [ ] Open Graph tags present
-- [ ] Sitemap.xml exists and is current
-- [ ] robots.txt configured correctly
-- [ ] Images have descriptive alt text
-- [ ] Heading hierarchy is correct
-- [ ] URLs are clean and descriptive
-- [ ] Core Web Vitals are good
-- [ ] Mobile-friendly
-
-**Red flags:**
-- Duplicate or missing meta tags
-- Missing sitemap
-- Broken internal links
-- Poor mobile experience
-- Slow page load
-- Missing alt text
-
-**See `seo-quality.md` for complete checklist.**
-
----
-
-## 6. Security Audit
-
-**Check against security-quality.md:**
-
-- [ ] Passwords are hashed properly
-- [ ] Authorization is enforced on all endpoints
-- [ ] Input validation is comprehensive
-- [ ] SQL/NoSQL injection is prevented
-- [ ] XSS is prevented
-- [ ] CSRF protection is implemented
-- [ ] Secrets are not exposed
-- [ ] Security headers are set
-- [ ] HTTPS is enforced
-- [ ] Dependencies are audited
-
-**Red flags:**
-- Hardcoded secrets
-- Missing authorization checks
-- SQL queries with string interpolation
-- Unvalidated user input
-- Missing security headers
-- Vulnerable dependencies
-
-**See `security-quality.md` for detailed security checks.**
-
----
-
-## 7. Privacy Audit
-
-**Check against privacy-compliance.md:**
-
-- [ ] Data collection is documented
-- [ ] Third-party services are documented
-- [ ] Cookies are documented
-- [ ] Privacy policy exists and is accurate
-- [ ] Consent mechanisms where required
-- [ ] Data deletion is supported where required
-- [ ] Sensitive data is protected
-- [ ] External resources reviewed (fonts, CDNs)
-- [ ] Session replay configured appropriately
-- [ ] Children's privacy considered if applicable
-
-**Red flags:**
-- Undocumented data collection
-- Undocumented third-party sharing
-- Missing or inaccurate privacy policy
-- Invasive tracking without disclosure
-- External fonts without privacy consideration
-- Children's data collected without safeguards
-
-**See `privacy-compliance.md` for detailed privacy checks.**
-
----
-
-## 8. Legal/Compliance Audit
-
-**Check against legal-compliance.md:**
-
-- [ ] Age restrictions implemented if required
-- [ ] Marketing emails have unsubscribe if applicable
-- [ ] Subscription terms are clear if applicable
-- [ ] Copyright/DMCA considered for user content
-- [ ] Applicable legal requirements identified
-- [ ] Technical controls implemented
-- [ ] Legal review recommended where appropriate
-
-**Red flags:**
-- Children can use service without age gate
-- Marketing emails without unsubscribe
-- Hidden subscription terms
-- User content without copyright policy
-- Fabricated compliance claims
-
-**See `legal-compliance.md` for detailed compliance checks.**
-
----
-
-## 9. Accessibility Audit
-
-**Check against accessibility-quality.md:**
-
-- [ ] Semantic HTML used
-- [ ] Keyboard navigation works
-- [ ] Focus indicators visible
-- [ ] Forms have labels
-- [ ] Images have alt text
-- [ ] Color contrast meets WCAG AA
-- [ ] Heading hierarchy is logical
-- [ ] ARIA used appropriately
-- [ ] Respects prefers-reduced-motion
-- [ ] Touch targets are adequate
-
-**Red flags:**
-- `<div>` used as buttons
-- Missing alt text
-- Poor color contrast
-- Keyboard inaccessible controls
-- No focus indicators
-- Missing form labels
-
-**See `accessibility-quality.md` for complete WCAG checklist.**
-
----
-
-## 10. Performance Audit
-
-**Check against performance-quality.md:**
-
-- [ ] Core Web Vitals are good (LCP, INP, CLS)
-- [ ] Images are optimized
-- [ ] Lazy loading implemented
-- [ ] Code splitting used
-- [ ] Bundle size is reasonable
-- [ ] Caching configured
-- [ ] Fonts optimized
-- [ ] Third-party scripts minimized
-
-**Red flags:**
-- Unoptimized images
-- Large JavaScript bundles
-- No lazy loading
-- Poor Core Web Vitals scores
-- No caching strategy
-- Too many third-party scripts
-
-**See `performance-quality.md` for detailed performance optimization.**
-
----
-
-## 11. Documentation Audit
-
-**Check all project context documents:**
-
-- [ ] prd.md is current and accurate
-- [ ] architecture.md matches implementation
-- [ ] rules.md is followed
-- [ ] design.md matches actual design
-- [ ] tasks.md is up to date
-- [ ] memory.md contains relevant context
-- [ ] No secrets in documentation
-- [ ] No stale information
-
-**Red flags:**
-- Documentation out of sync with code
-- Stale decisions
-- Missing important context
-- Secrets in documentation
-
----
-
-## Audit Report Template
+Conditional triggers: Privacy — personal data, analytics, cookies, or third-party sharing; Legal — children's access, marketing emails, subscriptions, or user content; SEO — public indexable pages. E-commerce = web app plus payments: always run Legal (auto-renewal terms) and Privacy (payment data). Record skipped/N/A dimensions with a reason in the report.
+
+| Dimension | Static / marketing site | Web app / SaaS | E-commerce | API / backend | Library / CLI tool | Mobile app | Internal tool |
+|---|---|---|---|---|---|---|---|
+| 1 Product alignment | Y | Y | Y | Y | Y | Y | Y |
+| 2 Architecture consistency | Y | Y | Y | Y | Y | Y | Y |
+| 3 Code quality | Y | Y | Y | Y | Y | Y | Y |
+| 4 UI/UX quality | Y | Y | Y | – | – | Y | Y |
+| 5 SEO | Y | C | Y | – | – | – | – |
+| 6 Security | Y | Y | Y | Y | Y | Y | Y |
+| 7 Privacy | C | Y | Y | C | C | Y | Y |
+| 8 Legal/compliance | C | Y | Y | C | C | Y | C |
+| 9 Accessibility | Y | Y | Y | – | – | Y | Y |
+| 10 Performance | Y | Y | Y | Y | Y | Y | C |
+| 11 Documentation | Y | Y | Y | Y | Y | Y | Y |
+
+## Dimensions (checks + red flags)
+
+### 1. Product Alignment — vs prd.md
+- Check: implemented features match documented requirements; no scope drift from goals; non-goals respected; success criteria measurable; product decisions documented.
+- Red flags: features not matching PRD, scope creep, forgotten requirements, undocumented product decisions.
+
+### 2. Architecture Consistency — vs architecture.md
+- Check: tech stack, file structure, data flow, API conventions, and external services match documentation; architectural decisions followed.
+- Red flags: undocumented technology additions, inconsistent file organization, multiple patterns for the same thing, architectural drift, ignored decisions.
+
+### 3. Code Quality — vs rules.md
+- Check: consistent naming; standard code organization; appropriately sized functions; minimal duplication; error handling present; comments explain "why" not "what"; dead code removed; dependencies justified.
+- Red flags: inconsistent naming, god functions/classes, copy-paste code, missing error handling, excessive complexity, unjustified dependencies.
+
+### 4. UI/UX Quality — vs design.md + ui-quality.md
+- Check: design system followed consistently; colors from documented palette; typography per type scale; spacing per documented scale; components reuse existing patterns; no generic AI aesthetic without justification; consistent interactive patterns; responsive behavior works.
+- Red flags: vibe-coded patterns (harsh gradients, excessive effects), inconsistent component styles, random colors, inconsistent spacing, duplicated components. See `ui-quality.md` for anti-vibe-coding checks.
+
+### 5. SEO (if applicable) — vs seo-quality.md
+- Check: unique meta titles and descriptions on all pages; canonical URLs; Open Graph tags; current sitemap.xml; correct robots.txt; descriptive image alt text; correct heading hierarchy; clean descriptive URLs; good Core Web Vitals; mobile-friendly.
+- Red flags: duplicate/missing meta tags, missing sitemap, broken internal links, poor mobile experience, slow page load, missing alt text. Full checklist: `seo-quality.md`.
+
+### 6. Security — vs security-quality.md
+- Check: passwords hashed properly; authorization enforced on all endpoints; comprehensive input validation; SQL/NoSQL injection and XSS prevented; CSRF protection; secrets not exposed; security headers set; HTTPS enforced; dependencies audited.
+- Red flags: hardcoded secrets, missing authorization checks, string-interpolated SQL, unvalidated user input, missing security headers, vulnerable dependencies.
+
+### 7. Privacy — vs privacy-compliance.md
+- Check: data collection, third-party services, and cookies documented; privacy policy exists and is accurate; consent mechanisms where required; data deletion supported where required; sensitive data protected; external resources (fonts, CDNs) reviewed; session replay configured appropriately; children's privacy considered if applicable.
+- Red flags: undocumented data collection or third-party sharing, missing/inaccurate privacy policy, invasive tracking without disclosure, external fonts without privacy consideration, children's data without safeguards.
+
+### 8. Legal/Compliance — vs legal-compliance.md
+- Check: age restrictions implemented if required; marketing emails have unsubscribe; subscription terms clear; copyright/DMCA considered for user content; applicable legal requirements identified; technical controls implemented; legal review recommended. Never claim legally compliant without evidence.
+- Red flags: children can use service without age gate, marketing emails without unsubscribe, hidden subscription terms, user content without copyright policy, fabricated compliance claims.
+
+### 9. Accessibility — vs accessibility-quality.md (WCAG)
+- Check: semantic HTML; keyboard navigation works; visible focus indicators; form labels; image alt text; color contrast meets WCAG AA; logical heading hierarchy; appropriate ARIA; respects prefers-reduced-motion; adequate touch targets.
+- Red flags: `<div>` used as buttons, missing alt text, poor contrast, keyboard-inaccessible controls, no focus indicators, missing form labels.
+
+### 10. Performance — vs performance-quality.md
+- Check: good Core Web Vitals (LCP, INP, CLS); optimized images; lazy loading; code splitting; reasonable bundle size; caching configured; fonts optimized; third-party scripts minimized.
+- Red flags: unoptimized images, large JavaScript bundles, no lazy loading, poor Core Web Vitals scores, no caching strategy, too many third-party scripts.
+
+### 11. Documentation — all project context docs
+- Check: prd.md current and accurate; architecture.md matches implementation; rules.md followed; design.md matches actual design; tasks.md up to date; memory.md contains relevant context; no secrets in documentation; no stale information.
+- Red flags: documentation out of sync with code, stale decisions, missing important context, secrets in documentation.
+
+## Severity Classification
+
+| Severity | Criteria | Action |
+|---|---|---|
+| Critical | Exploitable security hole, data loss/exposure, legal violation risk, broken core flow | Immediate action required; block release |
+| High | Major feature, privacy, or accessibility gap; significant architectural drift | Fix before release |
+| Medium | Quality debt, inconsistency, missing documentation | Schedule short-term (1–4 weeks) |
+| Low | Polish and minor improvements | Backlog |
+
+Per-dimension status: Good / Needs Attention / Critical Issues / N/A.
+
+## Report Format (compact)
 
 ```markdown
-# Project Audit Report
-
-**Date:** [Date]  
-**Auditor:** [Name or "AI Agent"]  
-**Project:** [Project name]
-
----
-
-## Executive Summary
-
-[Brief overview of audit findings: overall health, critical issues, recommendations]
-
----
-
-## Findings by Category
-
-### 1. Product Alignment
-**Status:** 🟢 Good / 🟡 Needs Attention / 🔴 Critical Issues
-
-**Findings:**
-- ✅ [Positive finding]
-- ⚠️ [Issue requiring attention]
-- ❌ [Critical issue]
-
-### 2. Architecture Consistency
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 3. Code Quality
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 4. UI/UX Quality
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 5. SEO (if applicable)
-**Status:** 🟢 / 🟡 / 🔴 / N/A
-
-**Findings:**
-- ...
-
-### 6. Security
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 7. Privacy
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 8. Legal/Compliance
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 9. Accessibility
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 10. Performance
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
-### 11. Documentation
-**Status:** 🟢 / 🟡 / 🔴
-
-**Findings:**
-- ...
-
----
-
-## Critical Issues (Immediate Action Required)
-
-1. **[Issue]:** [Description]
-   - **Impact:** [What's the risk?]
-   - **Recommendation:** [How to fix]
-
----
-
-## High Priority Issues
-
-1. **[Issue]:** [Description]
-   - **Impact:**
-   - **Recommendation:**
-
----
-
-## Medium Priority Issues
-
-1. **[Issue]:** [Description]
-   - **Impact:**
-   - **Recommendation:**
-
----
-
-## Low Priority Improvements
-
-1. **[Improvement]:** [Description]
-
----
-
-## Positive Findings
-
-- [What's working well]
-- [Good practices observed]
-
----
-
-## Recommendations
-
-### Immediate Actions
-1. [Action 1]
-2. [Action 2]
-
-### Short-Term (1-4 weeks)
-1. [Action 1]
-2. [Action 2]
-
-### Long-Term
-1. [Action 1]
-2. [Action 2]
-
----
-
-## Next Audit
-
-**Recommended:** [Date or milestone]
+# Project Audit Report — [project] — [date] — [auditor or "AI Agent"]
+Summary: [overall health; critical issues; key recommendations]
+| Dimension | Status | Findings |
+|---|---|---|
+| [name] | Good / Needs Attention / Critical / N/A | [positive findings; issues] |
+Critical issues (immediate action): [issue] — impact: [risk] — recommendation: [fix]
+Other issues: [High / Medium / Low] [issue] — impact — recommendation
+Positive findings: [what works well; good practices observed]
+Actions: immediate [...] / short-term 1–4 weeks [...] / long-term [...]
+Next audit: [date or milestone]
 ```
 
----
+## Tooling
 
-## Audit Automation
+- Automated: Lighthouse (performance, accessibility, SEO); axe DevTools and WAVE (accessibility).
+- Automated: ESLint (code quality); npm audit / yarn audit (dependencies).
+- Manual review required: product alignment, architecture consistency, design consistency, privacy practices, legal compliance, security logic, business logic.
 
-### Automated Tools
-- Lighthouse (performance, accessibility, SEO)
-- ESLint (code quality)
-- npm audit / yarn audit (dependencies)
-- axe DevTools (accessibility)
-- WAVE (accessibility)
+## Resolution
 
-### Manual Review Required
-- Product alignment
-- Architecture consistency
-- Design consistency
-- Privacy practices
-- Legal compliance
-- Security logic
-- Business logic
-
----
-
-**Summary:** Audits identify drift, technical debt, quality issues, and compliance gaps. Run audits regularly, document findings, prioritize issues, and track resolution.
-
-**Remember:** Audits should be constructive, not punitive. The goal is improvement, not perfection.
+- Verify the changed behavior after every fix; skip re-verification only for unrelated areas.
+- Track each issue to resolution; re-audit at the recommended date or milestone.

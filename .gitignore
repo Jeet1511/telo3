@@ -21,7 +21,11 @@ publish.ps1
 DISTRIBUTION-GUIDE.md
 .github/SEO-OPTIMIZATION.md
 
-# Temp
+# Temp and non-source release artifacts
 *.tmp
 tmp/
 temp/
+_backup_v5.1.0/
+releases/
+.npm-verification-*/
+*.tgz

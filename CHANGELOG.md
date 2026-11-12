@@ -10,6 +10,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.1.0] - 2026-11-12
+
+Final release preparation; publication remains a separate authorized action.
+
+### Fixed
+- Added real project skill installation for shared `.agents/skills` and native Qoder, Claude, Cursor, Gemini and Copilot layouts. Installed skills retain the full runtime and no longer depend on npm's temporary cache.
+- Chat-first activation remains supported with file tools alone. One compact core lives in AGENTS.md; host files use small pointers instead of repeating the full payload.
+- Corrected token comparisons: selected context and its baseline now include the same task references. Results are labeled character-based estimates, not actual model usage.
+- Report missing selected context and prefer complete context over incomplete alternative locations; discover context from nested project directories.
+- Redact detected env/JSON credentials and private-key bodies from context output. Improve Markdown fence, reference-link and footnote parsing.
+- Preserve user rules and whitespace during activation/deactivation. Stage instruction updates, use exclusive creation and detect concurrent changes.
+- Guard traversal, linked ancestors and dangling symlinks. Stage skill upgrades with whole-directory rollback; release install locks after stage errors.
+- Warn when stale scanning hits its bounded traversal limit rather than claiming fully verified freshness.
+- Include optional hooks in the npm archive; they do not activate unrelated projects. Remove policy/authority and approval-loop contradictions from guidance.
+
+### Release hygiene
+- Exclude examples, backups and custom metadata/registries from distribution; originals are archived locally, not destroyed.
+- Declare Node 20+ and keep zero runtime dependencies.
+- Add a prepublication gate that runs the regression suite and offline packed-package verification. No telemetry, postinstall side effects, automatic hook registration or publishing.
+
+## [6.0.0] - 2026-11-12
+
+Major rebuild: one self-activating skill, a working CLI, and lean on-demand depth.
+
+### Added
+- **Always-on activation**: `telo3 activate` / `deactivate` install a ~400-token contract block into `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursor/rules/telo3.mdc`, `.github/copilot-instructions.md` (`--all` adds Windsurf/Cline). Mention "telo3" once; it persists every session. Idempotent, additive, marker-delimited — never clobbers unrelated content.
+- `bootstrap/TELO3.md` core contract with the session-start ritual (memory resets between sessions → read `memory.md` first).
+- `references/anti-slop.md` — language/code/design/process/token slop taxonomy, counters, rationalization table, red flags.
+- Rebuilt zero-dependency CLI modules (`src/`): init, validate, status, context, tokens, find-context, version, activate.
+- Full test suite + `test/helpers.js` (35 tests): context, validation, activation, version-drift guard.
+- Optional deterministic `SessionStart` hook (`hooks/inject-contract.mjs`) for Claude-Code-style tools.
+- Six lean templates (~50-80 lines) and the missing example `prd.md`.
+
+### Changed
+- Consolidated three overlapping skills and byte-identical duplicates into a single `SKILL.md` (~120 lines vs 696).
+- Compressed 13 quality references from ~5,285 lines to ~1,376, preserving every concrete rule/threshold/law.
+- Templates reduced from ~2,600 lines to ~300; they are skeletons, not questionnaires.
+- Version has one source of truth (`package.json`); the drift guard checks the metadata files that carry it.
+- Communication is concise by default; "caveman mode" is opt-in, never forced.
+
+### Fixed
+- CLI was broken: `cli.js`/`index.js` imported a non-existent `src/`. Rebuilt and tested.
+- 12 of 13 references and all 6 templates were missing from the v5.1.0 package. Restored and compressed.
+- Windows-incompatible bash scripts replaced by the cross-platform Node CLI.
+- Corrected "don't test if not requested" advice: verifying changed behavior is required; only unrelated re-verification is skipped.
+- Version drift across files (e.g. schema `softwareVersion`).
+
+### Removed
+- Duplicate `AI-CONTEXT.md`, `ONBOARDING-SKILL.md`, `QUICK-START-ONBOARDING.md`, and the `skills/` trio (preserved in `_backup_v5.1.0/`).
+- Marketing bloat (social preview, inflated stats, keyword stuffing).
+
+---
+
 ## [Unreleased]
 
 ### Planned
@@ -18,6 +71,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integration guides for popular AI coding assistants
 - Video tutorials and documentation
 - Community-contributed templates
+
+## [5.1.0] - 2026-11-11
+
+### Added
+- Real Node CLI (`telo3 init / validate / status / context / version`) — zero dependencies, cross-platform, replaces the bash-only workflow
+- Real validator: required-section checks, placeholder detection, secret scan with line numbers, staleness detection (git or mtime), `--json` and `--strict` modes, CI-ready exit codes
+- `telo3 context <task>`: selective context loader with measured per-project token savings (`--measure`)
+- `telo3 status`: one-line health summary per document
+- Test suite (`npm test`, Node's built-in runner, zero dependencies) covering validator, init, context loader, CLI and version drift
+- GitHub Actions CI (Node 20/22/24) + example-project validation on every push/PR
+
+### Changed
+- `cli.js` and `index.js` are real implementations; the CLI no longer shells out to bash
+- `npm run init` / `npm run validate` now run the Node CLI
+
+### Fixed
+- Version drift: the repo claimed 5.0.0, 5.0.1, 5.0.5, 5.0.6 and 5.0.7 in different files. `package.json` is now the single source of truth; `npm test` enforces it
+- Removed unmeasured claims from metadata: "80% token savings", "5x speed", five-star rating, and an invented testimonial. Token savings are now measured per project with `telo3 context --measure`
 
 ---
 
