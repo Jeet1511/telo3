@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.9.0] - 2026-11-13
+
+### Added
+- Universal design engine for ANY site type (portfolio, SaaS, e-commerce, restaurant, editorial, event, nonprofit, docs, travel) with an art-direction matrix.
+- Taste algorithm (brief→concept→study & remix→type→color→layout→motion→critique) and a genericness reject gate that forces a redo of template-looking output.
+- Techniques reverse-engineered from shipped award sites (lusion.co, cuberto.com) and repos: fluid clamp() type, grotesk+mono pairing, expo easings, Three.js heroes.
+
 ## [6.7.0] - 2026-11-13
 
 ### Fixed

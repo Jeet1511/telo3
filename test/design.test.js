@@ -15,6 +15,16 @@ test('design: prescriptive design engine ships and is routed for design tasks', 
     assert.ok(text.includes(rule), `design engine missing ${rule}`);
   }
   assert.match(text, /anti-generic ≠ minimal/);
+  for (const type of ['Portfolio', 'SaaS', 'E-commerce', 'Restaurant', 'Editorial', 'Docs']) {
+    assert.ok(text.includes(type), `missing site type ${type}`);
+  }
+  for (const tech of ['clamp(', 'cubic-bezier(.16,1,.3,1)', 'Three.js']) {
+    assert.ok(text.includes(tech), `missing reverse-engineered technique ${tech}`);
+  }
+  assert.match(text, /Taste algorithm/);
+  assert.match(text, /Genericness reject gate/);
+  const core = readFileSync(join(REPO_ROOT, 'bootstrap', 'TELO3.md'), 'utf8');
+  assert.match(core, /never-generic/);
 });
 
 test('design: always-on core enforces auto-concise and brand-derived design', () => {

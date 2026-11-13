@@ -1,56 +1,71 @@
-# Design Decision Engine
+# Design Decision Engine — universal, award bar
 
-**Load when:** any logo, icon/SVG, or website/UI work. Forces brand-derived, product-appropriate choices and a visual verification gate.
+**Load when:** any logo, icon/SVG, or website/UI work, for ANY topic or site type. Target Awwwards-level, not template-level. Self-score rubric: **Design 40 / Usability 30 / Creativity 20 / Content 10.**
 
-Principle: **anti-generic ≠ minimal.** Avoid the tired AI defaults, but match richness to the product. A shopping mall, store, restaurant or portfolio needs real imagery, photo/content cards and a vibrant hero — never a plain text-only list. Record choices in `design.md`.
+Principle: **anti-generic ≠ minimal; rich ≠ award.** Every site gets ONE strong art-direction concept matched to its type and brand, expressive type, editorial layout, custom graphics, and ONE signature motion moment. Record the concept in `design.md`.
 
-## Decision procedure
+## Universal award principles
 
-1. Read `design.md` / brand assets; follow an existing system exactly.
-2. If absent, choose and RECORD: type pairing, cohesive palette, radius, spacing scale, icon set, and imagery plan.
-3. Implement with those tokens; use real (or clearly-labeled placeholder) photography for visual products.
-4. Verify visually (gate below); fix; re-verify.
-5. Update `memory.md`.
+- **Concept first.** Derive a metaphor from the brand/topic; every choice serves it. No default hero→3-card→testimonial→CTA template.
+- **Type.** Distinctive display + readable text; fluid scale via `clamp()` (e.g. `clamp(1rem,1vw+0.5rem,2rem)`); oversized confident hero (3–8rem). Grotesk + mono accent is a proven pairing (Aeonik/Space Grotesk + IBM Plex Mono). Avoid Inter/Roboto-everything.
+- **Layout.** Editorial/asymmetric; intentional whitespace; break the grid on purpose; bento only when it organizes content.
+- **Color.** Cohesive primary + 1 signature accent; texture/depth (grain, duotone, layered shadow) over flat white; contrast AA.
+- **Motion.** ONE signature moment at 60fps with `prefers-reduced-motion` fallback. Proven easings: `cubic-bezier(.16,1,.3,1)` / `(.19,1,.22,1)` (expo-out). Scroll-driven reveal (GSAP ScrollTrigger), clip-path image reveal, marquee, staggered hover, or a Three.js/WebGL hero.
+- **Content.** Real copy + art-directed imagery integrated into layout; storytelling; no lorem/fake stats.
+- **Usability.** Sub-3s load, green CWV, mobile in parallel, nav <3s, keyboard/focus/contrast.
 
-## Richness (match the product)
+## Type → art direction (universal matrix)
 
-- Commerce / mall / food / portfolio: hero with real imagery + overlay, product/store/dish **photo cards in grids**, galleries, ratings, vibrant accents.
-- Utility / dashboard / docs: calmer, denser, fewer images — clarity over decoration.
-- Never ship a text-only page for an image-rich brief. Cards and grids are GOOD when they present content; avoid only *pointless* nested cards.
+| Site type | Direction |
+|---|---|
+| Portfolio / agency / studio | Bold editorial, oversized type, case-study grids, WebGL/3D or clip-path hero, marquee credits |
+| SaaS / product | Clear value hero, product UI screenshots, feature bento, pricing, trust logos, subtle scroll reveals |
+| E-commerce / retail / mall | Vibrant hero imagery, product/photo cards, galleries, ratings, quick-buy, seasonal accents |
+| Restaurant / food | Full-bleed dish photography, menu typography, warm palette, reservation CTA, hours/map |
+| Editorial / blog / news | Strong masthead, readable measure (~65ch), pull quotes, article grids, category color-coding |
+| Event / conference | Countdown, speaker cards, schedule timeline, ticket CTA, bold date typography |
+| Nonprofit / cause | Human photography, impact stats, story sections, donate CTA, accessible contrast |
+| Docs / dashboard | Calm density, clear hierarchy, side nav, code blocks, search, minimal motion |
+| Travel / real-estate | Immersive imagery, map/list split, filter chips, booking cards, location storytelling |
 
-## Typography
+## Reverse-engineered techniques (study real shipped code)
 
-- Don't default everything to Inter/Roboto/system-ui. Pick a distinctive display + readable text face.
-- Pairings (justify): display `Space Grotesk`/`Sora`/`Fraunces` + text `Public Sans`/`IBM Plex Sans`/`Source Sans 3`. Inter for body only if utilitarian.
-- Scale ~1.25; body line-height 1.5; ≤2 families, 3 weights; self-host when practical.
+- github.com/Ali-Sanati/awwwards-portfolio — React+GSAP+Three.js: 3D hero, clip-path reveals, marquee, staggered hovers.
+- lusion.co — custom grotesk+mono, fluid clamp() scale, expo easings, Three.js hero.
+- cuberto.com — signature expo easing, smooth scroll storytelling.
+- Resources: github.com/hqasmei/awesome-design-resources, github.com/SHSFWork/awesome-inspiration; galleries awwwards.com / mobbin.com / siteinspire.com; techniques codrops.
 
-## Color
+## Taste algorithm (run in order, every design)
 
-- Derive a cohesive palette from the brand: a primary + 1-2 harmonious accents. Vibrant is fine; ensure text contrast ≥ 4.5:1 (AA).
-- Avoid the generic defaults: purple/indigo gradient hero, rainbow accents, glassmorphism everywhere, arbitrary neon.
-- Record tokens in `design.md`; reuse them.
+1. **Brief → concept.** Write one sentence: "This is a ___ that feels ___." Pick a metaphor; reject the first obvious idea.
+2. **Study & remix.** Open 2-3 award references for THIS topic (matrix + study list). Borrow their *techniques* (type scale, easing, layout tension), never their template. Combine into a new concept.
+3. **Type.** Choose a distinctive display + text pairing; set a modular scale (1.25–1.5) and fluid `clamp()` hero. Commit to one oversized moment.
+4. **Color.** Derive primary + signature accent from the brand via a harmony (complementary/analogous); add depth (grain/duotone). Reject default purple/indigo.
+5. **Layout.** Sketch an asymmetric grid with one deliberate break; place a focal point; use whitespace as a element. Reject centered-hero+3-cards.
+6. **Motion.** Pick ONE signature interaction; use expo easing; add reduced-motion fallback.
+7. **Critique.** Score against the rubric AND the genericness gate below; if generic, return to step 1.
 
-## Layout & spacing
+## Genericness reject gate (any hit = redo)
 
-- 4px spacing scale; one radius; a single subtle shadow source.
-- Use cards/grids for content; hero may use imagery + gradient overlay. Avoid shadows-on-everything and decorative-only sections.
-- Prose max-width ~65ch; real copy; no fake stats/logos/testimonials.
+- Centered hero + 3 equal feature cards + testimonial + CTA, unchanged.
+- Inter/Roboto everywhere; default purple/indigo gradient; glassmorphism; emoji icons.
+- Stock-photo clichés or lorem ipsum; fake stats/logos.
+- Uniform border-radius + shadow on every box; no focal point; no whitespace rhythm.
+- Looks like a Bootstrap/Tailwind template or a generic AI landing page.
 
-## Icons & SVG
+Taste = contrast + hierarchy + rhythm + restraint + one signature. If a stranger can't name what makes it distinct, it's generic — redo.
 
-- One consistent open set: Lucide, Tabler, or Phosphor; 24 grid; single stroke (1.5/2); `currentColor`.
-- Never emoji as icons; never mix sets; no decorative sparkles/orbs. Use real photos for content imagery (not icons).
-- Inline SVG `aria-hidden` (decorative) or `<title>` (meaningful).
+## Tokens & icons
 
-## Logo
-
-- Prefer a wordmark-first logo; a mark, if needed, is a simple geometric form from the brand noun — not a swoosh, gradient blob, or emoji. One/two colors, legible at 16px.
+- 4px spacing scale; one radius; single shadow source; record tokens in design.md.
+- One real icon set (Lucide/Tabler/Phosphor), 24 grid, single stroke, currentColor; never emoji icons; inline SVG aria-hidden/title.
+- Prefer a wordmark-first logo; a mark, if needed, is geometric from the brand noun; legible at 16px.
 
 ## Verification gate (mandatory before "done")
 
 1. Render in a real browser; screenshot desktop AND mobile.
-2. Check overflow, contrast, keyboard focus, reduced-motion, broken/missing images.
-3. Critique against every rule above — especially "does it look as rich as the product demands?" Fix; re-screenshot.
-4. Only then claim done. Use `visual-qa` when available.
+2. Self-score the rubric; ask "distinctive or template?" If template, redo art direction for this site type.
+3. Check overflow, contrast, keyboard, reduced-motion, broken images, load, 60fps.
+4. Fix and re-screenshot; only then claim done. Use `visual-qa` when available.
 
-A design never rendered and critiqued is unverified — say so.
+Never ship a design you have not rendered and critiqued.
