@@ -1,5 +1,6 @@
 import { existsSync, lstatSync, readFileSync, readdirSync, mkdirSync, writeFileSync, renameSync, rmSync, mkdtempSync, cpSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
+import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { assertSafePath } from './paths.js';
@@ -39,9 +40,12 @@ function detectAgent(root) {
 export function installSkill(dir = '.', opts = {}) {
   const root = resolve(dir);
   if (!existsSync(root) || !lstatSync(root).isDirectory()) throw new Error('Project directory must exist.');
-  const agent = !opts.agent || opts.agent === 'auto' ? detectAgent(root) : opts.agent;
+  const agent = !opts.agent || opts.agent === 'auto' ? (opts.global ? 'agents' : detectAgent(root)) : opts.agent;
   if (!Object.hasOwn(AGENT_DIRS, agent)) throw new Error(`Unknown agent. Choose auto, ${Object.keys(AGENT_DIRS).join(', ')}.`);
-  const target = assertSafePath(root, join(root, AGENT_DIRS[agent]));
+  // Global = user-level, shared by every project on this machine. Project-local (default)
+  // travels with the repo so context + powers survive moving to another PC or AI.
+  const base = opts.global ? resolve(opts.home || homedir()) : root;
+  const target = assertSafePath(base, join(base, AGENT_DIRS[agent]));
   // A manual/ZIP install can use its own runtime without copying over itself
   // or inventing an ownership record. External installers still refuse unmanaged copies.
   if (target === SOURCE) return { dir: target, agent, action: 'unchanged', skillPath: join(target, 'SKILL.md') };
@@ -55,7 +59,7 @@ export function installSkill(dir = '.', opts = {}) {
 
   let owned = null;
   if (existsSync(target)) {
-    const manifest = assertSafePath(root, join(target, MARKER));
+    const manifest = assertSafePath(base, join(target, MARKER));
     if (!existsSync(manifest)) throw new Error('Unmanaged/user-owned skill directory; refusing to overwrite it.');
     try { owned = JSON.parse(readFileSync(manifest, 'utf8')); } catch { throw new Error('Invalid install ownership record; refusing to overwrite.'); }
     if (owned.schema !== 1 || owned.name !== 'telo3' || !owned.files) throw new Error('Unmanaged skill ownership record.');
@@ -73,7 +77,7 @@ export function installSkill(dir = '.', opts = {}) {
   const parent = dirname(target);
   mkdirSync(parent, { recursive: true });
   const lock = `${target}.install-lock`;
-  assertSafePath(root, lock);
+  assertSafePath(base, lock);
   try { mkdirSync(lock); } catch (error) {
     if (error.code === 'EEXIST') throw new Error('Another skill installation is active; no files changed.');
     throw error;

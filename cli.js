@@ -24,10 +24,11 @@ import { getStatus } from './src/status.js';
 import { loadContext, TASK_MAP } from './src/context.js';
 import { activate, deactivate } from './src/activate.js';
 import { installSkill, AGENT_DIRS } from './src/install.js';
+import { checkPortable } from './src/portable.js';
 
 const ALLOWED_FLAGS = {
-  install: ['--agent'], init: ['--context-dir'], validate: ['--json', '--strict'],
-  status: [], context: ['--measure'], activate: ['--all', '--skill-path'], deactivate: [],
+  install: ['--agent', '--global'], init: ['--context-dir'], validate: ['--json', '--strict'],
+  status: [], context: ['--measure'], activate: ['--all', '--skill-path'], deactivate: [], check: [],
 };
 
 const HELP = `
@@ -197,10 +198,17 @@ function cmdContext(args) {
 }
 
 function cmdInstall(args) {
-  const { positional, agent } = parseFlags(args);
-  const result = installSkill(positional[0] || '.', { agent });
-  console.log(`Telo3 skill ${result.action} for ${result.agent}. Say "telo3" once in chat.`);
-  console.log('The project-local copy does not depend on npm cache or global installation.');
+  const { positional, agent, flags } = parseFlags(args);
+  const result = installSkill(positional[0] || '.', { agent, global: flags.has('--global') });
+  console.log(`Telo3 skill ${result.action} for ${result.agent}${flags.has('--global') ? ' (global)' : ''}. Say "telo3" once in chat.`);
+  console.log(flags.has('--global') ? 'Global: shared by all projects on this machine.' : 'Project-local: travels with the repo to any PC or AI.');
+}
+
+function cmdCheck(args) {
+  const { positional } = parseFlags(args);
+  const result = checkPortable(positional[0] || '.');
+  if (result.portable) console.log('Portable: yes. Context + skill use only relative paths; copy the project to any PC or AI.');
+  else { console.log('Portable: no.'); for (const i of result.issues) console.log('  - ' + i); process.exit(1); }
 }
 
 function cmdActivate(args) {
@@ -245,6 +253,9 @@ switch (command) {
     break;
   case 'deactivate':
     cmdDeactivate(rest);
+    break;
+  case 'check':
+    cmdCheck(rest);
     break;
   case 'version':
     console.log(`Telo3 v${getVersion()}`);

@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.4.0] - 2026-11-13
+
+### Added
+- Portability: skill, contract and context all live in the project with relative paths, so copying/cloning to another PC or AI keeps context and powers. `telo3 check` verifies nothing is machine-bound.
+- `install --global` for a user-level skill shared by every project on a machine (project-local remains the portable default).
+
 ## [6.3.0] - 2026-11-12
 
 ### Added

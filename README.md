@@ -18,6 +18,12 @@ The skill is copied into your project, independent of npm's cache. It detects ex
 
 No terminal at all? Copy this package into the project's skill directory as `telo3/` (with `SKILL.md`, references, templates and runtime assets), then say **telo3**. Plain web chat without project-file access cannot persist activation by itself.
 
+## Move to any PC or AI
+
+Everything lives inside your project with relative paths: the skill (`.agents/skills/telo3/` or your host's dir), the contract (`AGENTS.md`), and the context (`project-context/`). Commit those and copy/clone the project to another machine or AI — context and powers travel with it. Verify with `npx telo3-ai check`. On a fresh machine you can also just run `npm i telo3-ai` again.
+
+Prefer one install for every project on a machine? `npx telo3-ai install --global` puts the skill in your user-level skills dir. (Global is per-machine; project-local is what travels.)
+
 ## Small core, on-demand depth
 
 One compact contract in `AGENTS.md`; other host files contain small pointers, not duplicate full instructions. Domain references load only when needed. The skill is opt-in, not a prompt that hijacks every unrelated project.

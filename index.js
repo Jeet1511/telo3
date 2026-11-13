@@ -14,6 +14,7 @@ import { estimateTokens } from './src/tokens.js';
 import { findContextDir, CONTEXT_DOCS } from './src/find-context.js';
 import { activate, deactivate, renderContract } from './src/activate.js';
 import { installSkill, AGENT_DIRS } from './src/install.js';
+import { checkPortable } from './src/portable.js';
 
 export const version = getVersion();
 
@@ -75,6 +76,7 @@ export {
   renderContract,
   installSkill,
   AGENT_DIRS,
+  checkPortable,
 };
 
 export default {
@@ -97,4 +99,5 @@ export default {
   renderContract,
   installSkill,
   AGENT_DIRS,
+  checkPortable,
 };
