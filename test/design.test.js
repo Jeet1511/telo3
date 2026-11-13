@@ -11,9 +11,10 @@ test('design: prescriptive design engine ships and is routed for design tasks', 
   assert.ok(TASK_MAP.design.refs.includes('design-system.md'));
   assert.equal(references.designSystem, './references/design-system.md');
   const text = readFileSync(join(REPO_ROOT, 'references', 'design-system.md'), 'utf8');
-  for (const rule of ['Lucide', 'wordmark', 'OKLCH', 'screenshot', 'Inter']) {
+  for (const rule of ['Lucide', 'wordmark', 'palette', 'screenshot', 'Inter', 'photo cards', 'imagery']) {
     assert.ok(text.includes(rule), `design engine missing ${rule}`);
   }
+  assert.match(text, /anti-generic ≠ minimal/);
 });
 
 test('design: always-on core enforces auto-concise and brand-derived design', () => {

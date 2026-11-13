@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.7.0] - 2026-11-13
+
+### Fixed
+- Design engine over-corrected into minimalism (plain text-only sites for image-rich briefs). Rebalanced: anti-generic ≠ minimal. Now requires real imagery, photo/content cards and a vibrant hero for commerce/mall/food/portfolio, while still banning generic AI slop. Verified with a rendered mall demo.
+
 ## [6.6.0] - 2026-11-13
 
 ### Added
