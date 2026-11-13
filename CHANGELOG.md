@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.6.0] - 2026-11-13
+
+### Added
+- Capability fallback ladder in the always-on core and `smart-skill-delegation`: available skill/MCP → web search/built-ins → build minimally, token-cheap, no loops.
+- Anti-loop / anti-waste rules: 2-strike rule, no re-reads of unchanged files, bounded discovery, cached discoveries, explicit exit criteria.
+- `delegation` task route so discovery triggers reliably for project work.
+
 ## [6.5.0] - 2026-11-13
 
 ### Added

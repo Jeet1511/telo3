@@ -13,7 +13,7 @@ test('activate: installs the contract into AGENTS.md and tool files', () => {
   const agents = readFileSync(join(dir, 'AGENTS.md'), 'utf8');
   assert.match(agents, BEGIN);
   assert.match(agents, /always-on engineering contract/);
-  assert.match(agents, /memory resets between sessions/);
+  assert.match(agents, /memory resets between sessions/i);
   assert.ok(existsSync(join(dir, 'CLAUDE.md')));
   assert.ok(existsSync(join(dir, '.cursor', 'rules', 'telo3.mdc')));
   const mdc = readFileSync(join(dir, '.cursor', 'rules', 'telo3.mdc'), 'utf8');

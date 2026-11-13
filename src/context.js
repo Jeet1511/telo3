@@ -25,6 +25,7 @@ export const TASK_MAP = {
   seo: { docs: ['memory.md', 'design.md'], refs: ['seo-quality.md', 'performance-quality.md'] },
   performance: { docs: ['memory.md', 'architecture.md'], refs: ['performance-quality.md'] },
   docs: { docs: ['memory.md'], refs: ['document-specification.md'] },
+  delegation: { docs: ['memory.md'], refs: ['smart-skill-delegation.md', 'token-optimization.md'] },
   audit: { docs: [...ALL_DOCS], refs: ['project-audit.md'] },
   all: { docs: [...ALL_DOCS], refs: [] },
 };

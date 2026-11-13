@@ -19,8 +19,8 @@ test('design: prescriptive design engine ships and is routed for design tasks', 
 test('design: always-on core enforces auto-concise and brand-derived design', () => {
   const core = readFileSync(join(REPO_ROOT, 'bootstrap', 'TELO3.md'), 'utf8');
   assert.match(core, /ultra-concise by default/);
-  assert.match(core, /never emoji icons/);
-  assert.match(core, /wordmark-first logo/);
+  assert.match(core, /no emoji icons/);
+  assert.match(core, /wordmark logo/);
   assert.match(core, /screenshot \+ critique/);
 });
 

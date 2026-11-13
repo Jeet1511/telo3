@@ -43,11 +43,16 @@ All document names below end in `.md`. Read memory first. Reference names refer 
 | seo | design | seo-quality, performance-quality |
 | performance | architecture | performance-quality |
 | docs | — | document-specification |
+| delegation | memory | smart-skill-delegation, token-optimization |
 | audit | all six | project-audit |
 | all | all six | — |
 | default | — | — |
 
 Load `anti-slop`, `design-system` (logo/SVG/website decisions + visual gate), `token-optimization`, `workflow`, `ai-behavior`, or `smart-skill-delegation` only for a relevant problem. Use specialist skills/tools actually available; verify delegated output. Apply domain audits by project type, not automatically to every change.
+
+## Capability fallback & anti-loop
+
+For non-trivial work, check available skills/MCP/subagents. If absent, climb the token-cheap ladder: web search/fetch → built-in features → build minimally. Stop at first working rung; cache discoveries. Enforce the 2-strike rule, no re-reads of unchanged files, bounded discovery, and exit criteria. See `smart-skill-delegation` and `token-optimization`.
 
 ## Execute and close the loop
 

@@ -107,6 +107,15 @@ Tiny change → read exact file. Pattern/similar code → grep. Unknown location
 | Fix bug | Read → fix → verify → memory.md |
 | Refactor | Read → plan → confirm with user → refactor incrementally, verifying |
 
+## Anti-Loop & Stop Conditions
+
+Dumb loops are the biggest token sink. Enforce:
+- **2-strike rule:** after 2 failed attempts at the same approach, change approach or escalate — never retry identically a 3rd time.
+- **No re-reads:** don't re-read unchanged files or re-run unchanged checks; reuse prior results from context/memory.
+- **Bounded discovery:** one targeted search/read per question; stop when the answer is found; don't crawl.
+- **Cache:** record discovered tools/facts/decisions in memory.md so future sessions skip re-discovery.
+- **Exit criteria:** define "done" before starting; stop when met, not when exhausted.
+
 ## Self-Check
 
 - Read only necessary files? Skipped redundant (not required) verification?

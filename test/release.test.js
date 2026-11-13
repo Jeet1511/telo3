@@ -142,7 +142,8 @@ test('release: bad CLI flags and malformed values fail before side effects', t =
 test('release: activation references the existing context directory and compresses host bridges', t => {
   const dir = fixture(t);
   api.initContext(dir, { contextDir: 'docs/project-context' });
-  api.activate(dir);
+  const inst = api.installSkill(dir, { agent: 'agents' });
+  api.activate(dir, { skillPath: inst.skillPath });
   const agents = readFileSync(join(dir, 'AGENTS.md'), 'utf8');
   assert.match(agents, /docs\/project-context\/memory\.md/);
   assert.ok(api.estimateTokens(agents) <= 320, 'always-on core exceeded budget');
@@ -208,7 +209,8 @@ test('release: optional session hook emits nothing on inactive project, core onl
   const inactive = spawnSync(process.execPath, [hook], { cwd: dir, encoding: 'utf8' });
   assert.equal(inactive.status, 0);
   assert.deepEqual(JSON.parse(inactive.stdout), {});
-  api.activate(dir);
+  const inst = api.installSkill(dir, { agent: 'agents' });
+  api.activate(dir, { skillPath: inst.skillPath });
   const active = spawnSync(process.execPath, [hook], { cwd: dir, encoding: 'utf8' });
   const output = JSON.parse(active.stdout);
   assert.equal(output.hookSpecificOutput.hookEventName, 'SessionStart');

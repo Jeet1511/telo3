@@ -73,6 +73,17 @@ If the task needs an unavailable tool:
 
 Don't install or configure anything without authorization.
 
+## Fallback Ladder (when the tool is absent)
+
+Climb only as far as needed; stop at the first rung that satisfies the task. Budget tokens at every rung.
+
+1. **Available skill/MCP/subagent** → use it (best precision, often fewer tokens).
+2. **Built-in web search / fetch** → get current docs/facts instead of guessing or looping. One targeted query, read only the needed result.
+3. **Built-in features** (file tools, shell, browser) → do it directly.
+4. **Build minimally yourself** → smallest working implementation; no framework for a one-off.
+
+Never loop on a missing capability: if a rung fails twice, drop to the next rung or state the gap. Cache what you learn in `memory.md` so the next session skips re-discovery.
+
 ## Decision Flow
 
 1. Core coding task? → Do it directly.
