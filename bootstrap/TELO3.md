@@ -1,5 +1,5 @@
 ---
-version: 6.4.0
+version: 6.5.0
 ---
 <!-- TELO3:BEGIN v{{VERSION}} -->
 ## Telo3 — always-on engineering contract

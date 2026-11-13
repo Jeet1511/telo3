@@ -19,7 +19,7 @@ try {
   if (!global && !process.env.TELO3_SKIP && target !== SOURCE) {
     const installed = installSkill(target, { agent: 'auto' });
     activate(target, { skillPath: installed.skillPath });
-    process.stdout.write('Telo3 ready. Say "telo3" once in your AI chat.\n');
+    process.stdout.write('Telo3 ready. Say "telo3" once in your AI chat. By Jeet1511 · github.com/Jeet1511/telo3\n');
   }
 } catch {
   // Additive convenience only — never break `npm install`.

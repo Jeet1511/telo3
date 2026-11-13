@@ -202,6 +202,7 @@ function cmdInstall(args) {
   const result = installSkill(positional[0] || '.', { agent, global: flags.has('--global') });
   console.log(`Telo3 skill ${result.action} for ${result.agent}${flags.has('--global') ? ' (global)' : ''}. Say "telo3" once in chat.`);
   console.log(flags.has('--global') ? 'Global: shared by all projects on this machine.' : 'Project-local: travels with the repo to any PC or AI.');
+  console.log('Telo3 by Jeet1511 · github.com/Jeet1511/telo3');
 }
 
 function cmdCheck(args) {
@@ -220,6 +221,7 @@ function cmdActivate(args) {
   console.log(`Contract points to: ${result.skillPath}`);
   for (const t of result.targets) console.log(`  ${t.action === 'skipped' ? '⊗' : '✓'} ${t.file} — ${t.action}`);
   console.log('\nActive every session via your AI\'s instruction files. Mention "telo3" once — no need to repeat.');
+  console.log('Telo3 by Jeet1511 · github.com/Jeet1511/telo3');
 }
 
 function cmdDeactivate(args) {

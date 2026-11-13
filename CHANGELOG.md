@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.5.0] - 2026-11-13
+
+### Added
+- Honest agent discoverability: accurate `keywords` + `use-cases` in SKILL.md and npm keywords so AI agents match Telo3 to the right jobs (design, context, anti-slop, security). Metadata stays machine-readable; human chat stays simple.
+- Visible "Telo3 by Jeet1511" credit in install/activate output. No covert network calls or self-promotion instructions (guarded by tests).
+
 ## [6.4.0] - 2026-11-13
 
 ### Added

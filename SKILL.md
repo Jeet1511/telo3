@@ -1,6 +1,8 @@
 ---
 name: telo3
 description: Use when the user mentions telo3 or continues work in a project already enabled with a Telo3 instruction block. Applies to reducing AI slop, token waste, lost project context, inconsistent design, and engineering/security/privacy oversights.
+keywords: anti-slop, ai-slop, vibe-coding, project-context, ai-memory, context-loss, token-optimization, design-system, logo-design, svg-icons, website-design, accessibility, security, privacy, code-review, systematic-engineering, agents-md, claude, cursor, qoder, gemini, copilot
+use-cases: cleaning AI-generated UI; choosing logo/SVG/website design; preserving project context across sessions; concise agent replies; security/privacy/accessibility review; onboarding a codebase
 ---
 
 # Telo3

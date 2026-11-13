@@ -1,6 +1,6 @@
 {
   "name": "telo3-ai",
-  "version": "6.4.0",
+  "version": "6.5.0",
   "description": "Always-on engineering contract for AI coding agents: persistent project context, anti-slop discipline, measured token efficiency, and security/privacy/design quality. Mention telo3 once; it stays active.",
   "main": "index.js",
   "type": "module",
@@ -38,6 +38,11 @@
     "privacy",
     "accessibility",
     "design-system",
+    "logo-design",
+    "svg-icons",
+    "website-design",
+    "code-review",
+    "skill-discovery",
     "framework-agnostic"
   ],
   "author": {
