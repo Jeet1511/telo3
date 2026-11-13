@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.10.0] - 2026-11-14
+
+### Added
+- Read-only `telo3 design-check` CLI and API with file/line findings, bounded coverage and explicit inconclusive results. Source checks never claim a taste score or visual verification.
+- Task-scoped creative-stack reference with real toolchain selection and implementation recipes for GSAP/Lenis scrolling, split-text, clip-path reveals, pinned galleries, cursor interactions and Three.js scenes.
+
+### Changed
+- Website work defaults to a real toolchain and concept-led signature motion, with reduced-motion guidance and render/screenshot/critique verification.
+- Concise replies no longer imply reduced implementation quality or completeness. The always-on core retains its 320-token budget.
+
+### Fixed
+- Reinstall/activation reuses the active managed skill copy instead of creating a duplicate when activation adds another host folder.
+
 ## [6.9.0] - 2026-11-13
 
 ### Added

@@ -25,10 +25,11 @@ import { loadContext, TASK_MAP } from './src/context.js';
 import { activate, deactivate } from './src/activate.js';
 import { installSkill, AGENT_DIRS } from './src/install.js';
 import { checkPortable } from './src/portable.js';
+import { checkDesign } from './src/design-check.js';
 
 const ALLOWED_FLAGS = {
   install: ['--agent', '--global'], init: ['--context-dir'], validate: ['--json', '--strict'],
-  status: [], context: ['--measure'], activate: ['--all', '--skill-path'], deactivate: [], check: [],
+  status: [], context: ['--measure'], activate: ['--all', '--skill-path'], deactivate: [], check: [], 'design-check': ['--json'],
 };
 
 const HELP = `
@@ -57,6 +58,9 @@ Commands:
                                       Mention "telo3" once; stays active every session.
                                       --all also targets Windsurf and Cline.
   deactivate [dir]                    Remove the Telo3 contract blocks.
+  check [dir]                         Inspect project portability.
+  design-check [dir] [--json]          Read-only UI source review signals, not a taste score.
+                                      Exit 0: no signals; 1: review; 2: inconclusive.
   version                             Show version.
   help                                Show this help.
 
@@ -212,6 +216,23 @@ function cmdCheck(args) {
   else { console.log('Portable: no.'); for (const i of result.issues) console.log('  - ' + i); process.exit(1); }
 }
 
+function cmdDesignCheck(args) {
+  const { flags, positional } = parseFlags(args);
+  const result = checkDesign(positional[0] || '.');
+  if (flags.has('--json')) console.log(JSON.stringify(result, null, 2));
+  else {
+    console.log(`Design source check: ${result.status}. Static generic-pattern signals, not a quality verdict.`);
+    for (const finding of result.findings) {
+      const location = finding.file ? `${finding.file}:${finding.line}` : 'project';
+      console.log(`  ${location} [${finding.id}] ${finding.message}`);
+    }
+    console.log(`Scanned ${result.coverage.files} files; coverage ${result.coverage.complete ? 'within limits' : 'incomplete'}. Visual quality unverified.`);
+    if (result.omittedFindings) console.log(`${result.omittedFindings} further findings omitted to bound output.`);
+    for (const item of result.coverage.skipped) console.log(`  Skipped ${item.file}: ${item.reason}`);
+  }
+  process.exitCode = result.status === 'inconclusive' ? 2 : result.status === 'needs-review' ? 1 : 0;
+}
+
 function cmdActivate(args) {
   const { flags, positional, skillPath } = parseFlags(args);
   const dir = positional[0] || '.';
@@ -258,6 +279,9 @@ switch (command) {
     break;
   case 'check':
     cmdCheck(rest);
+    break;
+  case 'design-check':
+    cmdDesignCheck(rest);
     break;
   case 'version':
     console.log(`Telo3 v${getVersion()}`);

@@ -5,6 +5,8 @@
 
 ## Design Philosophy
 
+Concept: [TODO: one sentence — "This is a ___ that feels ___." Pick a metaphor; every choice serves it.]
+
 [TODO: brand personality, the feeling the UI should give, 2-3 principles.]
 
 ## Colors

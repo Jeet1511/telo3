@@ -15,6 +15,7 @@ import { findContextDir, CONTEXT_DOCS } from './src/find-context.js';
 import { activate, deactivate, renderContract } from './src/activate.js';
 import { installSkill, AGENT_DIRS } from './src/install.js';
 import { checkPortable } from './src/portable.js';
+import { checkDesign } from './src/design-check.js';
 
 export const version = getVersion();
 
@@ -37,6 +38,7 @@ export const references = {
   performance: './references/performance-quality.md',
   ui: './references/ui-quality.md',
   designSystem: './references/design-system.md',
+  creativeStack: './references/creative-stack.md',
   tokens: './references/token-optimization.md',
   delegation: './references/smart-skill-delegation.md',
   specification: './references/document-specification.md',
@@ -77,6 +79,7 @@ export {
   installSkill,
   AGENT_DIRS,
   checkPortable,
+  checkDesign,
 };
 
 export default {
@@ -100,4 +103,5 @@ export default {
   installSkill,
   AGENT_DIRS,
   checkPortable,
+  checkDesign,
 };

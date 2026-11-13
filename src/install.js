@@ -30,6 +30,26 @@ function collect(source, rel, output) {
 }
 
 function detectAgent(root) {
+  // Activation creates .cursor/rules itself. That directory alone must not
+  // cause the next auto install to switch hosts and duplicate the payload.
+  const managed = [];
+  for (const agent of ['agents', 'qoder', 'claude', 'gemini', 'cursor', 'copilot']) {
+    const target = join(root, AGENT_DIRS[agent]);
+    const markerPath = assertSafePath(root, join(target, MARKER));
+    if (!existsSync(markerPath)) continue;
+    try {
+      const marker = JSON.parse(readFileSync(markerPath, 'utf8'));
+      if (marker.schema === 1 && marker.name === 'telo3' && marker.files?.['SKILL.md']) managed.push(agent);
+    } catch { throw new Error('Invalid existing skill ownership record; inspect it before installing another copy.'); }
+  }
+  const instructions = assertSafePath(root, join(root, 'AGENTS.md'));
+  if (managed.length && existsSync(instructions)) {
+    const block = readFileSync(instructions, 'utf8').match(/<!-- TELO3:BEGIN[^>]*-->[\s\S]*?<!-- TELO3:END -->/)?.[0];
+    const linked = block?.match(/Depth: `([^`]+)`/)?.[1];
+    const active = linked && managed.find(agent => resolve(root, linked) === join(root, AGENT_DIRS[agent], 'SKILL.md'));
+    if (active) return active;
+  }
+  if (managed.length) return managed[0];
   for (const agent of ['qoder', 'claude', 'gemini', 'cursor']) {
     if (existsSync(join(root, `.${agent}`))) return agent;
   }

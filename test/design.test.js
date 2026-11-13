@@ -10,6 +10,13 @@ test('design: prescriptive design engine ships and is routed for design tasks', 
   assert.ok(existsSync(join(REPO_ROOT, 'references', 'design-system.md')));
   assert.ok(TASK_MAP.design.refs.includes('design-system.md'));
   assert.equal(references.designSystem, './references/design-system.md');
+  assert.ok(existsSync(join(REPO_ROOT, 'references', 'creative-stack.md')));
+  assert.ok(TASK_MAP.design.refs.includes('creative-stack.md'));
+  assert.equal(references.creativeStack, './references/creative-stack.md');
+  const stack = readFileSync(join(REPO_ROOT, 'references', 'creative-stack.md'), 'utf8');
+  for (const s of ['Vite', 'GSAP', 'Lenis', 'Three.js', 'single-file', 'prefers-reduced-motion']) {
+    assert.ok(stack.includes(s), `creative-stack missing ${s}`);
+  }
   const text = readFileSync(join(REPO_ROOT, 'references', 'design-system.md'), 'utf8');
   for (const rule of ['Lucide', 'wordmark', 'palette', 'screenshot', 'Inter', 'photo cards', 'imagery']) {
     assert.ok(text.includes(rule), `design engine missing ${rule}`);
@@ -23,16 +30,17 @@ test('design: prescriptive design engine ships and is routed for design tasks', 
   }
   assert.match(text, /Taste algorithm/);
   assert.match(text, /Genericness reject gate/);
+  assert.match(text, /design-check/);
   const core = readFileSync(join(REPO_ROOT, 'bootstrap', 'TELO3.md'), 'utf8');
-  assert.match(core, /never-generic/);
+  assert.match(core, /design-system\.md/);
+  assert.match(core, /design-check/);
 });
 
-test('design: always-on core enforces auto-concise and brand-derived design', () => {
+test('design: always-on core keeps concise replies but not reduced implementation quality', () => {
   const core = readFileSync(join(REPO_ROOT, 'bootstrap', 'TELO3.md'), 'utf8');
   assert.match(core, /ultra-concise by default/);
-  assert.match(core, /no emoji icons/);
-  assert.match(core, /wordmark logo/);
-  assert.match(core, /screenshot \+ critique/);
+  assert.match(core, /NOT implementation quality/);
+  assert.match(core, /render \+ screenshot \+ critique/);
 });
 
 test('design: SKILL routes design work to the engine and visual gate', () => {

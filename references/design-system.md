@@ -2,7 +2,7 @@
 
 **Load when:** any logo, icon/SVG, or website/UI work, for ANY topic or site type. Target Awwwards-level, not template-level. Self-score rubric: **Design 40 / Usability 30 / Creativity 20 / Content 10.**
 
-Principle: **anti-generic ≠ minimal; rich ≠ award.** Every site gets ONE strong art-direction concept matched to its type and brand, expressive type, editorial layout, custom graphics, and ONE signature motion moment. Record the concept in `design.md`.
+Principle: **anti-generic ≠ minimal; rich ≠ award.** Every site gets ONE strong art-direction concept matched to its type and brand, expressive type, editorial layout, custom graphics, and ONE signature motion moment. Record the concept in `design.md`. For every website, also load `creative-stack.md` and build with a real toolchain + its motion recipes (preloader, smooth scroll, split-text, clip-path reveals, pinned sections, WebGL where it fits) — plain HTML with IntersectionObserver fade-ins cannot reach the award bar.
 
 ## Universal award principles
 
@@ -63,9 +63,10 @@ Taste = contrast + hierarchy + rhythm + restraint + one signature. If a stranger
 
 ## Verification gate (mandatory before "done")
 
-1. Render in a real browser; screenshot desktop AND mobile.
-2. Self-score the rubric; ask "distinctive or template?" If template, redo art direction for this site type.
-3. Check overflow, contrast, keyboard, reduced-motion, broken images, load, 60fps.
-4. Fix and re-screenshot; only then claim done. Use `visual-qa` when available.
+1. Run `telo3 design-check [dir]` (or `node <skill>/cli.js design-check`). It is a read-only source linter: it flags concrete generic-pattern signals with file/line evidence, but it cannot judge taste or certify originality. Treat findings as review prompts, not a quality score. Empty/incomplete scans are inconclusive.
+2. Render in a real browser; screenshot desktop AND mobile.
+3. Self-score the rubric; ask "distinctive or template?" If template, redo art direction for this site type.
+4. Check overflow, contrast, keyboard, reduced-motion, broken images, load, 60fps.
+5. Fix and re-screenshot; only then claim done. Use `visual-qa` when available.
 
-Never ship a design you have not rendered and critiqued.
+Never ship a design you have not rendered and critiqued. If no terminal/browser is available, run the supported checks and state the gap.
