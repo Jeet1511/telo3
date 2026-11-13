@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [6.3.0] - 2026-11-12
+
+### Added
+- `references/design-system.md`: prescriptive design decision engine for logo, SVG/icons and website (brand-derived type/palette, one real icon set, wordmark-first logo) with a mandatory render→screenshot→critique gate. Routed for design tasks.
+
+### Changed
+- Ultra-concise replies are now the automatic default for vibe coding ("caveman auto"); no keyword needed. Expand only on request.
+- Always-on core now enforces brand-derived design non-negotiables and the visual gate, alongside the context handoff.
+
 ## [6.2.0] - 2026-11-12
 
 ### Added

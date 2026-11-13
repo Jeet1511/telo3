@@ -31,7 +31,7 @@ try {
     assert.ok(!['SKILL-METADATA.json', 'skill.json'].includes(file), 'Custom registry metadata must not ship');
     assert.ok(pkg.files.some(entry => entry.endsWith('/') ? file.startsWith(entry) : file === entry) || file === 'package.json', `File outside release allowlist: ${file}`);
   }
-  assert.equal([...paths].filter(file => file.startsWith('references/')).length, 14);
+  assert.equal([...paths].filter(file => file.startsWith('references/')).length, 15);
   assert.equal([...paths].filter(file => file.startsWith('templates/')).length, 6);
   assert.equal(packed.version, pkg.version);
   assert.ok(packed.size < 100000, 'Archive exceeds lightweight 100KB budget');

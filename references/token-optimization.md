@@ -89,9 +89,9 @@ Docs: memory.md, tasks.md updated.
 
 Spend tokens on: relevant code, clear concise updates, decisions/tradeoffs, error explanations, security/privacy considerations, clarification when truly unclear.
 
-### Caveman Mode (opt-in only)
+### Concise by default (auto)
 
-Enable only when the user asks for ultra-concise output ("caveman mode", "be concise", "token optimize"). Never force it. Then: short sentences, no filler, facts only, action → result → done ("Done. Tested. Works."). Return to normal when the user asks.
+Ultra-concise is the DEFAULT for vibe coding — no keyword required. Short sentences, facts only, result → evidence → gap ("Done. Tested. Works."). No filler, no restating, no narrating tools. Expand to full explanation only when the user asks or the task is genuinely complex. "Caveman mode" is simply this default made explicit; it no longer needs to be requested.
 
 ## Tool Selection
 

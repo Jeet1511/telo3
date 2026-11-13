@@ -17,7 +17,7 @@ const ALL_DOCS = ['memory.md', 'prd.md', 'architecture.md', 'rules.md', 'design.
 export const TASK_MAP = {
   feature: { docs: ['memory.md', 'prd.md', 'architecture.md', 'rules.md'], refs: [] },
   bugfix: { docs: ['memory.md', 'architecture.md', 'rules.md'], refs: [] },
-  design: { docs: ['memory.md', 'design.md', 'rules.md'], refs: ['ui-quality.md'] },
+  design: { docs: ['memory.md', 'design.md', 'rules.md'], refs: ['ui-quality.md', 'design-system.md'] },
   security: { docs: ['memory.md', 'architecture.md', 'rules.md'], refs: ['security-quality.md', 'privacy-compliance.md'] },
   privacy: { docs: ['memory.md', 'architecture.md'], refs: ['privacy-compliance.md', 'legal-compliance.md'] },
   legal: { docs: ['memory.md', 'prd.md'], refs: ['legal-compliance.md'] },

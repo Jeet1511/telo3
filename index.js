@@ -35,6 +35,7 @@ export const references = {
   seo: './references/seo-quality.md',
   performance: './references/performance-quality.md',
   ui: './references/ui-quality.md',
+  designSystem: './references/design-system.md',
   tokens: './references/token-optimization.md',
   delegation: './references/smart-skill-delegation.md',
   specification: './references/document-specification.md',
